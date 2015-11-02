@@ -31,10 +31,30 @@ main.classes { background-color:#efefdf; }
   
   .under-summary { @include flex-container(); position: absolute; right:1em; bottom:1em; left:1em;
     > * { @include flex-item(50%); margin-bottom: 0.5em; }
+    .tuition { max-width: 3em; }
     .signup { text-align: right; }
   }
   .price { font-size:1.5em; line-height: 200%; }
   
   &.inactive { background-color:rgba(black,0.2); }
   &.active { background-color:rgba(yellow,0.2); }
+}
+
+.classpage { 
+  .cover { float: right; margin-left: 1rem; margin-bottom: 1rem; }
+  .audience { @include flex-container(); margin-bottom: 1em;
+    > * { @include flex-item(33.3333%); }
+  }
+  .under-summary { @include flex-container(); margin-bottom: 2em; clear: both; 
+    .duration { @include flex-item(25%); padding-top: 1em; }
+    .times { @include flex-item(25%); padding-top: 1em; }
+    .tuition { @include flex-item(3em); }
+    .price { font-size:2em; }
+    .register-holder { text-align: right; }
+  }
+  blockquote {
+    cite { display: block; text-align: right;
+      &:before { content:'\2014'; }
+    }
+  }
 }

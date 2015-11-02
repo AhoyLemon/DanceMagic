@@ -6,7 +6,35 @@ html(lang="en")
     include ./jade/head.jade
   body
     include ./jade/header.jade
-    main.class
+    main.classpage
+      img.cover(src="https://unsplash.it/600/400/?random")
       h1 Name of Class
-      
-      
+      .audience
+        .days
+          span.day Mondays
+        .age-range
+          span Ages: 
+          span.age.min 5
+          |  - 
+          span.age.max 12
+        .gender
+          span Girls Only
+      p Fusce faucibus eget libero nec lobortis. In hendrerit lacus et pellentesque elementum. Donec in ornare lacus. Sed dapibus dui nunc, ac pretium odio blandit non. Maecenas vel suscipit magna, vel viverra nulla. Nam accumsan sapien a laoreet lacinia. Cras libero justo, faucibus commodo erat sit amet, hendrerit finibus augue. Nam quis porta nisl. Vivamus iaculis varius risus ut laoreet. Pellentesque vehicula feugiat mi, nec hendrerit risus consequat ut. Praesent dapibus orci dolor. Aenean gravida consectetur massa, quis auctor dolor maximus nec. Nullam quis tortor eu tortor vehicula ornare.
+      //p Suspendisse porttitor urna vitae ornare auctor. Aliquam erat volutpat. Nullam eget viverra sem. Duis in turpis et ligula sollicitudin dictum in in sem. Vestibulum vel lorem id enim bibendum porta a sed nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ac consectetur metus, convallis gravida orci. Cras pulvinar nulla et nisl rutrum, sed sodales magna hendrerit.
+      .under-summary
+        .duration
+          span.start September 8th
+          | -
+          span.end May 12th 
+        .times
+          span.time.start 6:30PM
+          | -
+          span.time.end 7:30PM
+        .tuition
+          span.price $59
+        .register-holder
+          a.button.jackrabbit(href="http://app.jackrabbitclass.com/reg.asp?id=505314&preLoadClassID=4672036") REGISTER NOW
+      blockquote
+        p Morbi non diam sed nibh posuere congue. In hac habitasse platea dictumst. Donec non velit lacus. Sed suscipit arcu sit amet nisi commodo, eget malesuada massa sagittis. Maecenas et mauris at dui fringilla ullamcorper. Maecenas at ornare elit. Curabitur at sodales eros, nec posuere est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+        cite Vladomir Fakename
+    include ./jade/footer.jade

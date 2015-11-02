@@ -1,0 +1,19 @@
+-var thisPage = "Events"
+-var lastUpdated = "11.01.2015"
+doctype html
+html(lang="en")
+  head
+    include ./jade/head.jade
+  body
+    include ./jade/header.jade
+    main.events
+      h1 Upcoming Events
+      .event-listing
+        +event("Hip Hop Nutcracker", "Monday, November 23", "6:00pm-8:00pm", "$35", true)
+          p Dance-N-Magic will be hosting a special Master Class when the Hip Hop Nutcracker comes to the Ordway! This 2 hour master class is welcoming to all levels of dancers! Taught by cast member Robert Taylor Jr.
+        +event("Hip Hop Nutcracker", "Monday, November 23", "6:00pm-8:00pm", "$35", true)
+          p Dance-N-Magic will be hosting a special Master Class when the Hip Hop Nutcracker comes to the Ordway! This 2 hour master class is welcoming to all levels of dancers! Taught by cast member Robert Taylor Jr.
+        +event("Hip Hop Nutcracker", "Monday, November 23", "6:00pm-8:00pm", "$35", true)
+          p Dance-N-Magic will be hosting a special Master Class when the Hip Hop Nutcracker comes to the Ordway! This 2 hour master class is welcoming to all levels of dancers! Taught by cast member Robert Taylor Jr.
+    include ./jade/footer.jade
+    

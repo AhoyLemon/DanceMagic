@@ -33,5 +33,18 @@ mixin class(name, day, minage, maxage, gender, startdate, enddate, starttime, en
         .tuition
           span.price= price
         .signup
-          a.button SIGN UP
-          
+          a.button(href="/class.html") Learn More
+
+mixin event(name, date, time, cost, image)
+  article.event
+    .inner
+      h3= name
+      if image
+        img.cover(src="https://unsplash.it/300/200")
+      span.cost= cost
+      time.date= date
+      time.time= time
+      if block
+        summary
+          block
+      a.button(href="/event.html") Learn More
