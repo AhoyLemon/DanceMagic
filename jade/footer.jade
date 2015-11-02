@@ -1,16 +1,20 @@
 footer
   .inner
-    a.address
-      address
-        span Dance N Magic
-        span 913 Selby Ave
-        span St. Paul, MN 55104
-    a.email
-      | info@dance-n-magic.com
-    a.phone
-      | (651) 688-3448
-    a.facebook
-      | Facebook
-    a.instagram
-      | Instagram
+    section
+      a.address
+        img.logo(src="/svg/gmap.svg")
+        address
+          span Dance N Magic
+          span 913 Selby Ave
+          span St. Paul, MN 55104
+    section.contact
+      a.email
+        | info@dance-n-magic.com
+      a.phone(href="tel:651-688-3448")
+        | (651) 688-3448
+    section
+      a.facebook
+        | Facebook
+      a.instagram
+        | Instagram
 include ./javascripts.jade

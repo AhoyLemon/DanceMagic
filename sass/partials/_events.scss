@@ -1,4 +1,4 @@
-main.events { background-color:#efefdf;
+main.events {
   h1 { margin-bottom: 0.5em; }
 }
 
@@ -10,4 +10,8 @@ main.events { background-color:#efefdf;
   time { display: block; }
   .cost { float: right; font-size:2em; }
   .button { width: 100%; text-align: center; }
+}
+
+.special-event { @include flex-item(calc(33.3333% - 2em)); margin-left: 1em; margin-right: 1em; margin-bottom: 2em;
+  .inner { padding: 1em; color:white; text-shadow: 1px 1px 1px black; }
 }

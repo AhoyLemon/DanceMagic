@@ -1,3 +1,16 @@
-footer { background-color:grey; color:white; padding:1em $base-margin;
-  
+footer { background-color:$footer-color; color:$yellow; padding:1em $base-margin;
+  a { color:$yellow; }
+  .inner { @include flex-container();
+    section { @include flex-item(33.3333%);}
+  }
+  .address { position: relative;
+    span { display: block; }
+    img.logo { width:2rem; width:2rem; position: absolute; top:0.5rem }
+    address { margin-left: 3em; }
+  }
+  .contact {
+    a { display: block;
+      &.email { margin-bottom: 1em; }
+    }
+  }
 }

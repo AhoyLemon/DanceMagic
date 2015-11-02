@@ -1,7 +1,8 @@
 mixin class(name, day, minage, maxage, gender, startdate, enddate, starttime, endtime, price, image)
   article.class(min-age="#{minage}" max-age="#{maxage}" gender="#{gender}" day="#{day}")
     .inner
-      h3= name
+      h3
+        a(href="/class.html")= name
       .audience
         .days
           span.day= day
@@ -48,3 +49,13 @@ mixin event(name, date, time, cost, image)
         summary
           block
       a.button(href="/event.html") Learn More
+
+mixin specialEvent(name)
+  article.special-event(style="background-image:url(https://unsplash.it/400/600)")
+    .inner
+      h3 Private Dance Lessons
+      if block
+        summary
+          block
+      .button-holder
+        a.button(href="/event.html") Learn More

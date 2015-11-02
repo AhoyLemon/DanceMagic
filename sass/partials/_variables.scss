@@ -6,11 +6,19 @@ $normal:400;
 $bold:700;
 
 // COLORS
-$dark:#131313;
-$orange: #c85c0d;
-$white:#f5f5f5;
-$yellow:#f2efe4;
-  $tweet:#f4f3ed;
+$purple:#865F8C;
+$yellow:#DFB440;
+$green:#138C68;
+$purple-alt:#BF29D9;
+$green-alt:#0FA678;
+$light-grey:#D7D7D9;
+$black:#131313;
+
+// COLOR UTILITIES
+$header-color: $purple;
+$footer-color: $purple;
+$body-color: $light-grey;
+$link-color:$green;
 
 
 

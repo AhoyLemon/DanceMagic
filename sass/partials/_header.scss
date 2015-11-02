@@ -1,4 +1,8 @@
-header { background:grey; color:white; padding:1em $base-margin;
+header { background:$header-color; color:$yellow; padding:1em $base-margin;
   .title { font-size:2.5em; }
-  nav { text-align: right; text-transform: uppercase; }
+  nav { text-align: right; text-transform: uppercase;
+    a { color:$yellow; text-decoration: none;
+      &:hover { font-weight: $bold; }
+    }
+  }
 }

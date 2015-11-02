@@ -1,4 +1,4 @@
-main.home { padding:$base-margin; @include cover('https://unsplash.it/1600/800'); height: 100vh;
+main.home { padding:$base-margin; @include cover('https://unsplash.it/1600/800'); height: 80vh;
   .button { text-align: center; 
     span { display: block; }
     .first { font-size:0.9em; }

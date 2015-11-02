@@ -11,22 +11,27 @@ function hideClasses() {
 }
 
 
-$('#AgePick').change(function() {
-  var age = parseInt($(this).val());
-  $('.class').each(function() {
-    if (age > parseInt($(this).attr('max-age')) ) {
-      $(this).addClass('too-old');
-    } else {
-      $(this).removeClass('too-old');
-    }
-    if (age < parseInt($(this).attr('min-age')) ) {
-      $(this).addClass('too-young');
-    } else {
-      $(this).removeClass('too-young');
-    }
-  });
+$('#AgePick').on('keyup change', function() {
+  if ($(this).val() < 3 || $(this).val() > 99 || isNaN($(this).val()) || $(this).val() == null ) {
+    $('.class').removeClass('too-old, too-young');
+  } else {
+    var age = parseInt($(this).val());
+    $('.class').each(function() {
+      if (age > parseInt($(this).attr('max-age')) ) {
+        $(this).addClass('too-old');
+      } else {
+        $(this).removeClass('too-old');
+      }
+      if (age < parseInt($(this).attr('min-age')) ) {
+        $(this).addClass('too-young');
+      } else {
+        $(this).removeClass('too-young');
+      }
+    }); 
+  }
   hideClasses();
 });
+
 $('#SelectGender').change(function() {
   if ( $(this).val() == "both") {
     $('.class').removeClass('wrong-gender');
@@ -67,21 +72,21 @@ $('#ClassDay').change(function() {
 
 
 function PopupCenter(url, title, w, h) {  
-    // Fixes dual-screen position                         Most browsers      Firefox  
-    var dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : screen.left;  
-    var dualScreenTop = window.screenTop !== undefined ? window.screenTop : screen.top;  
-              
-    width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;  
-    height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;  
-              
-    var left = ((width / 2) - (w / 2)) + dualScreenLeft;  
-    var top = ((height / 2) - (h / 2)) + dualScreenTop;  
-    var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);  
-  
-    // Puts focus on the newWindow  
-    if (window.focus) {  
-        newWindow.focus();  
-    }  
+  // Fixes dual-screen position                         Most browsers      Firefox  
+  var dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : screen.left;  
+  var dualScreenTop = window.screenTop !== undefined ? window.screenTop : screen.top;  
+
+  width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;  
+  height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;  
+
+  var left = ((width / 2) - (w / 2)) + dualScreenLeft;  
+  var top = ((height / 2) - (h / 2)) + dualScreenTop;  
+  var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);  
+
+  // Puts focus on the newWindow  
+  if (window.focus) {  
+    newWindow.focus();  
+  }  
 }  
 
 
