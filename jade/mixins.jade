@@ -1,0 +1,37 @@
+mixin class(name, day, minage, maxage, gender, startdate, enddate, starttime, endtime, price, image)
+  article.class(min-age="#{minage}" max-age="#{maxage}" gender="#{gender}" day="#{day}")
+    .inner
+      h3= name
+      .audience
+        .days
+          span.day= day
+        .age-range
+          span Ages: 
+          span.age.min= minage
+          |  - 
+          span.age.max= maxage
+        if (gender=="F")
+          .gender
+            span Girls Only
+        else if (gender=="M")
+          .gender
+            span Boys Only
+      if image
+        img.cover(src="https://unsplash.it/300/200")
+      if block
+        summary
+          block
+      .under-summary
+        .duration
+          span.start= startdate
+          | -
+          span.end= enddate
+        .times
+          span.time.start= starttime
+          | -
+          span.time.end= endtime
+        .tuition
+          span.price= price
+        .signup
+          a.button SIGN UP
+          

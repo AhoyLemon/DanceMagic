@@ -1,0 +1,7 @@
+main.home { padding:$base-margin; @include cover('https://unsplash.it/1600/800'); height: 100vh;
+  .button { text-align: center; 
+    span { display: block; }
+    .first { font-size:0.9em; }
+    .second { font-size:1.2em; }
+  }
+}

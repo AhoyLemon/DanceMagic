@@ -1,0 +1,40 @@
+main.classes { background-color:#efefdf; }
+
+.class-finder { background:white; width:auto; margin-left: auto; margin-right: auto; margin-bottom: 2rem; max-width: 40rem; @extend %clearfix;
+  .cover { float: left; }
+  .criteria { float: left; padding: 0.5em;
+    &.age { width:5rem; }
+    input, select { display: block; width:100%; font-size:1.5em; font-family: $font; padding: 0.25em;  }
+    label { display: block; }
+  }
+}
+
+.class-listing { @include flex-container(); margin-left: -1em; margin-right: -1em; }
+
+.featured-class { @include flex-item(100%); margin-left: 1em; margin-right: 1em; margin-bottom: 2em; background-color:white; padding: 2em;
+  h3 { padding-bottom:0.5em; }
+  .cover { float: left; margin-right: 1rem; }
+  .button-holder { text-align: right; }
+}
+
+.class { @include flex-item(calc(33.3333% - 2em)); margin-left: 1em; margin-right: 1em; margin-bottom: 2em; background-color:white; padding: 1em; position: relative; padding-bottom:6em;
+  h3 { margin-bottom: 0.5em; }
+  .audience { @include flex-container(); margin-bottom: 0.5em; 
+    .days { @include flex-item(33.3333%);
+      span { font-weight: $bold; }
+    }
+    .age-range { @include flex-item(33.3333%);
+      .age { font-weight: $bold; }
+    }
+  }
+  .cover { width:100%; height: auto; margin-bottom: 0.5rem; }
+  
+  .under-summary { @include flex-container(); position: absolute; right:1em; bottom:1em; left:1em;
+    > * { @include flex-item(50%); margin-bottom: 0.5em; }
+    .signup { text-align: right; }
+  }
+  .price { font-size:1.5em; line-height: 200%; }
+  
+  &.inactive { background-color:rgba(black,0.2); }
+  &.active { background-color:rgba(yellow,0.2); }
+}
