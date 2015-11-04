@@ -8,7 +8,7 @@ $bold:700;
 // COLORS
 $purple:#865F8C;
 $yellow:#DFB440;
-$green:#138C68;
+$green:#084932;
 $purple-alt:#BF29D9;
 $green-alt:#0FA678;
 $light-grey:#ededed;
@@ -24,13 +24,15 @@ $pink:#ffe9fe;
 $header-color: $purple;
 $footer-color: $purple;
 $body-color: $light-grey;
-$link-color:$dark-purple;
+$link-color:$green;
+$border-color:lighten($black,15%);
 
-
+//BRAND COLORS
+$facebook-color:#3b5998;
+$instagram-color:#fb3958;
 
 //MEASUREMENTS
 $base-margin:4rem;
-
 
 // ANIMATIONS
 $easeBounce: cubic-bezier(0, 2, 1, 1);

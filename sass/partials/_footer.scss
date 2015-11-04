@@ -1,16 +1,28 @@
 footer { background-color:$dark-purple; color:$pink; padding:1em $base-margin;
-  a { color:$pink; }
+  a { color:$pink; text-decoration: none; cursor: pointer;
+    svg * { fill:currentColor; }
+    &:hover { color:$green-alt;
+      span { text-decoration: underline; }
+    }
+  }
   .inner { @include flex-container();
-    section { @include flex-item(33.3333%);}
+    section { @include flex-item(25%);}
   }
   .address { position: relative;
     span { display: block; }
-    img.logo { width:2rem; width:2rem; position: absolute; top:0.5rem }
+    img.logo { width:2rem; width:2rem; position: absolute; top:1.75rem }
     address { margin-left: 3em; }
   }
-  .contact {
-    a { display: block;
-      &.email { margin-bottom: 1em; }
+  .contact { text-align: center; 
+    svg { width:2em; height:2em; }
+    span { display: block; }
+  }
+  .social { text-align: right; 
+    a { width:4em; height: 4em; display: inline-block; margin-right: 1em;
+      &:hover {
+        &.facebook { color:$facebook-color; }
+        &.instagram { color:$instagram-color; }
+      }
     }
   }
 }
