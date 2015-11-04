@@ -7,9 +7,9 @@ h3 { font-size:1.9rem; }
 p { padding-bottom: 1em; }
 
 .button-holder { text-align: center; }
-button, .button { display: inline-block; background-color:$green; color:white; font-size:1.5em; padding:0.25em 1em; cursor: pointer; text-decoration: none;
-  &:hover { background-color:lighten($green,10%); box-shadow:inset -0.1em -0.1em 0.05em $green; }
-  &:active { background-color:darken($green,10%); box-shadow:inset 0.1em 0.1em 0.05em darken($green,50%); }
+button, .button { display: inline-block; background-color:$link-color; color:$white; font-size:1.5em; padding:0.25em 1em; cursor: pointer; text-decoration: none;
+  &:hover { background-color:lighten($link-color,10%); box-shadow:inset -0.2em -0.2em 0.1em $link-color; }
+  &:active { background-color:darken($link-color,3.5%); box-shadow:inset 0.2em 0.2em 0.1em darken($link-color,50%); }
 }
 a { color:$link-color; }
 

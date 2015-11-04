@@ -1,5 +1,5 @@
-footer { background-color:$footer-color; color:$yellow; padding:1em $base-margin;
-  a { color:$yellow; }
+footer { background-color:$dark-purple; color:$pink; padding:1em $base-margin;
+  a { color:$pink; }
   .inner { @include flex-container();
     section { @include flex-item(33.3333%);}
   }

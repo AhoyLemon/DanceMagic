@@ -1,8 +1,23 @@
-header { background:$header-color; color:$yellow; padding:1em $base-margin;
+$header-bg:$dark-purple;
+$header-fg:$pink;
+
+
+header { background:$header-bg; color:$header-fg; padding:1em $base-margin; position: relative; height:$base-margin;
+  .hat { height: 8rem; width: 8rem; position: absolute; left:$base-margin; bottom:-1rem; top:0;
+    .bg { fill:$header-fg; }
+    .fg { fill:$header-bg; }
+  }
+  .logotype { position: absolute; width:20vw; left:($base-margin * 3); top:0.5rem;
+    * { fill:$header-fg; }
+  }
   .title { font-size:2.5em; }
-  nav { text-align: right; text-transform: uppercase;
-    a { color:$yellow; text-decoration: none;
+  nav { text-align: right; text-transform: uppercase; font-size:1.75em;
+    a { color:$header-fg; text-decoration: none;
       &:hover { font-weight: $bold; }
     }
+  }
+  a.log-in { position: absolute; top:$base-margin; left:19rem; display:block; background-color:$header-bg; color:$header-fg; padding:0.3em 1em; border-bottom-left-radius: 1em; border-bottom-right-radius:1em; font-size:1.1em; cursor:pointer;
+    &:hover { background-color:lighten($header-bg,10%); /*box-shadow: inset -0.2em -0.2em 0.2em $header-bg;*/ }
+    &:active { backround-color:darken($header-bg,20%); box-shadow: inset 0.2em 0.2em 0.2em darken($purple,50%); }
   }
 }
