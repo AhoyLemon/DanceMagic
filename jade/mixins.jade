@@ -6,7 +6,7 @@ mixin class(name, day, minage, maxage, gender, startdate, enddate, starttime, en
       .img-cover(style="background-image:url(https://unsplash.it/30#{n}/20#{n})")
     .inner
       h3
-        a(href="/class.html")= name
+        a(href="class.html")= name
       .audience
         .days
           span.day= day
@@ -39,31 +39,71 @@ mixin class(name, day, minage, maxage, gender, startdate, enddate, starttime, en
         .tuition
           span.price= price
         .signup
-          a.button(href="/class.html") Learn More
+          a.button(href="class.html") Learn More
 
 mixin event(name, date, time, cost, image)
   article.event
     if image
       .img-cover(style="background-image:url(https://unsplash.it/300/200)")
     .inner
-      h3= name
+      h3
+        a(href="event.html")= name
       //-
         if image
           img.cover(src="")
-      span.cost= cost
-      time.date= date
-      time.time= time
+      .glance
+        span.cost= cost
+        time.date= date
+        time.time= time
       if block
         summary
           block
-      a.button(href="/event.html") Learn More
+      a.button(href="event.html") Learn More
 
 mixin specialEvent(name)
-  article.special-event
+  article.special.event
     .inner
-      h3 Private Dance Lessons
+      h3
+        a(href="event.html")= name
       if block
         summary
           block
       .button-holder
-        a.button(href="/event.html") Learn More
+        a.button.alternate(href="event.html") Learn More
+-var s = 0
+mixin staffMember(name, jobTitle, facebook, linkedin, twitter, pinterest, email)
+  -s++
+  article.staff-member
+    .inner
+      h3= name
+      h4= jobTitle
+      img.profile(src="https://unsplash.it/20#{s}/30#{s}")
+      if block
+        summary
+          block
+      summary.contact
+        if (facebook && facebook != "")
+          a.facebook(href="#{facebook}")
+            svg(viewBox="0 0 100 100")
+              use.box(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox")
+              use.symbol(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialFacebook")
+        if (linkedin && linkedin != "")
+          a.linkedin
+            svg(viewBox="0 0 100 100")
+              use.box(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox")
+              use.symbol(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialLinkedIn")
+        if (twitter && twitter != "")
+          a.twitter
+            svg(viewBox="0 0 100 100")
+              use.box(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox")
+              use.symbol(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialTwitter")
+        if (pinterest && pinterest != "")
+          a.pinterest
+            svg(viewBox="0 0 100 100")
+              use.box(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox")
+              use.symbol(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialPinterest")
+        if (email && email != "")
+          a.email
+            svg(viewBox="0 0 100 100")
+              use.box(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox")
+              use.symbol(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialEmail")

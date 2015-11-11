@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Staff | Dance N Magic</title>
+    <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet">
+    <link href="css/dance.css?updated=11.10.2015" rel="stylesheet">
+    <link rel="canonical" href="localhost">
+    <!-- Favicons
+    link(rel="apple-touch-icon", sizes="57x57", href="/apple-touch-icon-57x57.png")
+    link(rel="apple-touch-icon", sizes="60x60", href="/apple-touch-icon-60x60.png")
+    link(rel="apple-touch-icon", sizes="72x72", href="/apple-touch-icon-72x72.png")
+    link(rel="apple-touch-icon", sizes="76x76", href="/apple-touch-icon-76x76.png")
+    link(rel="apple-touch-icon", sizes="114x114", href="/apple-touch-icon-114x114.png")
+    link(rel="apple-touch-icon", sizes="120x120", href="/apple-touch-icon-120x120.png")
+    link(rel="apple-touch-icon", sizes="144x144", href="/apple-touch-icon-144x144.png")
+    link(rel="apple-touch-icon", sizes="152x152", href="/apple-touch-icon-152x152.png")
+    link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon-180x180.png")
+    link(rel="icon", type="image/png", href="/favicon-32x32.png", sizes="32x32")
+    link(rel="icon", type="image/png", href="/android-chrome-192x192.png", sizes="192x192")
+    link(rel="icon", type="image/png", href="/favicon-96x96.png", sizes="96x96")
+    link(rel="icon", type="image/png", href="/favicon-16x16.png", sizes="16x16")
+    link(rel="manifest", href="/manifest.json")
+    link(rel="mask-icon", href="/safari-pinned-tab.svg", color="#5bbad5")
+    meta(name="msapplication-TileColor", content="#da532c")
+    meta(name="msapplication-TileImage", content="/mstile-144x144.png")
+    meta(name="theme-color", content="#1d93e8")
+    
+    -->
+    <!-- Twitter
+    each val, index in {'card':'summary', 'creator':'@AhoyLemon', 'title':siteTitle, 'description':description, 'image':siteURL+'/img/twitter-card.png', 'url':siteURL}
+      meta(name="twitter:" content="")
+    -->
+    <!-- Open Graph
+    each val, index in {'title':siteTitle, 'type':'website', 'url':siteURL, 'image':siteURL+'/img/og-image.png', 'description':description, 'email':'lemon@hirelemon.com'}
+      meta(property="og:" content="")
+      
+    -->
+  </head>
+  <body>
+    <header><a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="hat">
+          <g class="background">
+            <circle cx="50" cy="50.4" r="41.9" class="bg"></circle>
+          </g>
+          <g class="foreground">
+            <path d="M94.5 53.1l2.4-2.8-2.4-2.8 2-3.1-2.7-2.4 1.6-3.3-3-2.1 1.2-3.5-3.2-1.7.7-3.6-3.4-1.3.3-3.7-3.6-.8-.2-3.7-3.6-.4-.6-3.6h-3.7l-1.1-3.5-3.6.5L70 8.1l-3.5 1L64.6 6l-3.4 1.4-2.3-2.9-3.2 1.8-2.6-2.5L50.2 6l-2.9-2.2-2.6 2.5-3.2-1.8-2.3 2.9L35.8 6l-2 3-3.5-1-1.5 3.3-3.6-.5-1.2 3.6h-3.7l-.6 3.6-3.6.4-.2 3.6-3.6.9.3 3.7-3.4 1.3.7 3.6-3.2 1.7 1.2 3.5-3 2.1L6.5 42l-2.7 2.5 2 3.1-2.4 2.8 2.4 2.8-2 3.1 2.7 2.5L4.9 62l3 2.1-1.2 3.5 3.2 1.7-.7 3.6 3.4 1.3-.3 3.7 3.6.9.2 3.7 3.6.4.6 3.6H24l1.1 3.5 3.6-.5 1.5 3.3 3.5-1 1.9 3.1 3.4-1.4 2.3 2.9 3.2-1.8 2.6 2.5 2.9-2.2 2.9 2.2 2.6-2.5 3.2 1.8 2.3-2.9 3.4 1.4 1.9-3.1 3.5 1 1.5-3.3 3.6.5 1.1-3.5h3.7l.6-3.6 3.6-.4.2-3.7 3.6-.9-.3-3.7 3.4-1.3-.7-3.6 3.2-1.7-1.2-3.5 3-2.1-1.6-3.3 2.7-2.5-1.7-3.1zM50.1 90.8c-22.3 0-40.4-18.1-40.4-40.4C9.7 28 27.8 9.9 50.1 9.9c22.3 0 40.4 18.1 40.4 40.4.1 22.4-18 40.5-40.4 40.5z" class="fg"></path>
+            <path d="M53.7 44.1l-1 .3-.5 1.6-1-1.3h-1.6l.9-1.2c-.8-.1-1.4-.2-1.9-.2 0 0-14.1.2-12.4 7.2.4 1 4.5 3.7 14.8 2.5.8-.2 1.6-.3 2.4-.6l-.5-.7h.9l.6-.7.2.9.4.1c3.3-.9 6.7-2.1 8.2-2.8 1.1-.7 2.6-1.2 1.9-1.9-1.4-.7-6.9-2.3-11.4-3.2zM51 49v1.4l-1.1-.9-1.4.4.5-1.3-.8-1.2 1.4.1.9-1.1.4 1.4 1.3.5-1.2.7zm6.5.7l-1.1-.6-1.2.5.3-1.2-.9-.9 1.3-.1.6-1.1.5 1.2 1.3.2-1 .8.2 1.2z" class="fg"></path>
+            <path d="M50.1 10.4c-22 0-39.9 17.9-39.9 39.9s17.9 39.9 39.9 39.9S90 72.3 90 50.3 72.2 10.4 50.1 10.4zm14.5 26.7l1.7.4-1.3 1.1.2 1.8-1.5-.9-1.7.7.4-1.7-1.2-1.3 1.8-.1.9-1.5.7 1.5zm-6.4-11.5l1.6 3.1 3.4.4-2.4 2.4.6 3.4-3.1-1.6-3 1.6.5-3.4-2.5-2.4 3.4-.5 1.5-3zm-1.7 11.8l1.4.1.9-1.1.3 1.3 1.3.5-1.2.8-.1 1.4-1-.9-1.3.4.5-1.3-.8-1.2zM44.4 16.2l4.5 2.9 4.9-2.1-1.4 5.2 3.5 4.1-5.3.3-2.8 4.6-1.9-5-5.2-1.2 4.1-3.4-.4-5.4zm6.1 69.6c-15.9 0-17.5-8.6-17.3-9.7 1.1-2.2 1.8-15 1.8-15 14.1 9.2 29.7 1.4 31.4-1.3.2 2.8 1.4 9.6 2.8 14.5 0 9.3-14.5 11.3-18.7 11.5zm25.7-37.5s-6.8 4.1-21.7 9c-2.9.9-11.5 3.7-19.8 2.2-4.4-.7-7.4-.6-10.1-4.9-.7-1.4-2.6-4.7 3.2-11.5 2.3-1.8 5.8-5.3 17.2-4.1 7.5 1.2 14.6 2.7 14.6 2.7s5.2 1.1 8.6 2.2c3.4 1.2 9.2 2.2 8 4.4z" class="fg"></path>
+          </g>
+        </svg>
+        <!--
+        svg.hat(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100")
+          path(d="M29.4 63.7s-1 17.8-2.5 20.9c-.3 1.5 1.9 13.5 24 13.5 5.9-.2 26.1-3.1 26-16C75 75.3 73.3 65.8 73 62c-2.4 3.7-24 14.5-43.6 1.7zM75.5 40c-4.8-1.5-12-3.1-12-3.1s-9.8-2-20.3-3.7c-15.7-1.8-20.6 3.1-23.8 5.7-8.1 9.5-5.3 14-4.4 15.9 3.9 5.9 8 5.8 14.1 6.8 11.5 2 23.4-1.9 27.5-3.2C77.3 51.7 86.7 46 86.7 46c1.7-3.1-6.4-4.5-11.2-6zm-6.9 7.3c-3.1 1.4-11.1 4.1-17 5.2-14.3 1.8-20-2-20.6-3.4C28.7 39.3 48.3 39 48.3 39c4.7.1 20.1 4 22.9 5.5 1 1.1-1 1.8-2.6 2.8zM61.7 14.4l2.1 4.3 4.8.6-3.4 3.4.9 4.7-4.3-2.2-4.2 2.3.8-4.7-3.5-3.3 4.7-.7M42.5 1.3l6.3 4.1 6.8-2.9-1.8 7.2 4.8 5.6-7.4.4-3.9 6.4-2.7-6.9-7.2-1.7 5.7-4.8M73 30.9l-1.9 1.6.3 2.5-2.1-1.3-2.3 1 .6-2.4-1.7-1.9 2.5-.2 1.3-2.1.9 2.3M59.4 30.8l1.8.2 1.2-1.5.5 1.8 1.7.7-1.6 1-.1 1.9-1.4-1.3-1.8.5.7-1.7")
+          path(d="M50.3 37l2.1.7 1.8-1.4v2.3l1.9 1.3-2.1.7-.7 2.2-1.3-1.9-2.3.1 1.3-1.8M56.6 44.7l1.8-.1.9-1.6.7 1.6 1.7.4-1.3 1.1.2 1.8-1.5-.9-1.6.8.4-1.8M48.2 48.2l.7-1.8-1.1-1.6 1.9.1 1.2-1.6.5 1.9 1.9.6-1.6 1.1-.1 2-1.5-1.2M54.5 53l.5-1.2-.7-1.1 1.3.1.7-1.1.4 1.3 1.2.4-1.1.7v1.3l-1-.8")
+        -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 47.1" class="logotype">
+          <path d="M7.6 28h2V16.4h-2v-6.2h10.7c7 0 11.8 5 11.8 11.9 0 7-4.8 11.9-11.8 11.9H7.6v-6zm10-11.6V28c2.1-.2 4.7-1.9 4.7-5.8s-2.4-5.6-4.7-5.8zM31.9 24.8c0-8.2 5.5-11 12.2-11 5.1 0 9.5 2.1 9.5 2.1v10.7c0 1.5 1 1.6 2 1.3v6s-1.5.8-4.3.8c-2.5 0-3.9-.9-4.7-2.2-1.8 1.5-4 2.2-6 2.2-4.5 0-8.7-2.9-8.7-9.9zm13.7-5.1s-1-.5-2.3-.5c-1.6 0-3.5 1-3.5 5 0 4.1 1.6 5.1 3.3 5.1.9 0 1.8-.3 2.5-.6v-9zM72.2 22.4c0-1.1-.7-1.8-1.7-1.8-1.3 0-2.7.9-3.3 1.3V28h2.1v6.2h-12V28h2.1v-7.5h-2.1v-6.2h10v2.3c1.5-1.3 3.8-2.8 7.2-2.8 4.2 0 5.8 3.8 5.8 6.7V28h2v6.2H70.2V28h2.1v-5.6zM93 13.8c5.9 0 9.4 2.5 9.4 2.5V22h-6.2s-.2-2.5-2.4-2.5c-1.8 0-2.7 1.6-2.7 4.3 0 3.1 2.2 4.8 4.4 4.8 3 0 5.9-1.7 5.9-1.7l1.6 5.3s-3.3 2.6-8.9 2.6c-6.4 0-11-3.7-11-10.5.1-6.6 4.1-10.5 9.9-10.5zM124.5 26.5l1.4 5.4s-3.1 2.9-9.5 2.9c-6.7 0-11.7-3-11.7-10.5 0-7.7 5-10.5 10.5-10.5 8.1 0 10.8 4 10.8 9.6 0 .6 0 1.1-.1 1.7h-13.2c.5 2.7 2.6 3.5 5.1 3.5 3.5-.1 6.7-2.1 6.7-2.1zm-6.7-3.9c0-2.6-1-3.5-2.5-3.5s-2.5.8-2.7 3.5h5.2zM151.9 22.4c0-1.1-.7-1.8-1.8-1.8-1.3 0-2.7.9-3.3 1.3V28h2.1v6.2h-12.1V28h2.1v-7.5h-2.1v-6.2h10v2.3c1.5-1.3 3.8-2.8 7.2-2.8 4.2 0 5.8 3.8 5.8 6.7V28h2v6.2h-12.1V28h2.1v-5.6zM173.1 10.3h15.7v6.2h-1.2l4 10.8 4-10.8h-1.2v-6.2h15.7v6.2h-2V28h2v6.2H198V28h2v-9.1l-5.8 15.7h-5.4L183 18.8V28h2v6.2h-11.9V28h2V16.4h-2v-6.1zM211.6 24.8c0-8.2 5.5-11 12.2-11 5.1 0 9.5 2.1 9.5 2.1v10.7c0 1.5 1 1.6 2 1.3v6s-1.5.8-4.3.8c-2.5 0-3.9-.9-4.7-2.2-1.8 1.5-4 2.2-6 2.2-4.5 0-8.7-2.9-8.7-9.9zm13.8-5.1s-1-.5-2.3-.5c-1.6 0-3.5 1-3.5 5 0 4.1 1.6 5.1 3.3 5.1.9 0 1.8-.3 2.5-.6v-9zM258.7 35c0 5.3-4.1 8.6-11.4 8.6-6.3 0-10.8-2.5-10.8-2.5l1.7-5.6c5 2.4 12.5 2 12.5-2.1V33c-1.5 1.2-3.4 1.8-5.3 1.8-5.1 0-8.5-3.1-8.5-10.6 0-7.6 5.4-10.4 10.9-10.4s10.8 2.1 10.8 2.1V35zm-7.9-15.3s-1.1-.5-2.5-.5c-1.6 0-3.3 1-3.3 5 0 6.4 4.1 5.3 5.8 4.5v-9zM261.7 28h2v-7.5h-2v-6.2h10V28h2v6.2h-12V28zm5.9-24c2.6 0 4.7 2.1 4.7 4.7s-2.1 4.7-4.7 4.7c-2.5 0-4.6-2-4.6-4.7.1-2.6 2.1-4.7 4.6-4.7zM284.5 13.8c5.9 0 9.4 2.5 9.4 2.5V22h-6.2s-.2-2.5-2.4-2.5c-1.8 0-2.7 1.6-2.7 4.3 0 3.1 2.2 4.8 4.4 4.8 3 0 5.9-1.7 5.9-1.7l1.6 5.3s-3.3 2.6-8.9 2.6c-6.4 0-11-3.7-11-10.5.1-6.6 4-10.5 9.9-10.5z"></path>
+        </svg></a>
+      <div class="inner">
+        <nav><a href="/classes.html">classes</a> | <a href="/events.html">events</a> | <a href="/about-us.html">about us</a> | <a href="blogs.html">blogs</a> | <a href="contact.html">contact</a></nav>
+      </div><a class="log-in">LOG IN</a>
+    </header>
+    <main class="classes">
+      <h1>Meet The Staff</h1>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" style="display:none">
+        <path id="SocialBox" d="M0 0h100v100H0z"></path>
+        <path id="SocialPinterest" d="M50 24.9c-13.8 0-24.9 11.2-24.9 24.9 0 10.2 6.1 19 14.9 22.8-.1-1.7 0-3.8.4-5.7.5-2 3.2-13.6 3.2-13.6s-.8-1.6-.8-3.9c0-3.7 2.1-6.5 4.8-6.5 2.3 0 3.4 1.7 3.4 3.7 0 2.3-1.5 5.7-2.2 8.9-.6 2.6 1.3 4.8 3.9 4.8 4.7 0 7.9-6.1 7.9-13.3 0-5.5-3.7-9.6-10.4-9.6-7.6 0-12.3 5.6-12.3 11.9 0 2.2.6 3.7 1.6 4.9.5.5.5.8.4 1.4-.1.5-.4 1.6-.5 2-.2.6-.7.9-1.2.6-3.5-1.4-5.1-5.2-5.1-9.5 0-7.1 6-15.6 17.8-15.6 9.5 0 15.8 6.9 15.8 14.3 0 9.8-5.4 17.1-13.5 17.1-2.7 0-5.2-1.5-6.1-3.1 0 0-1.4 5.7-1.8 6.9-.5 1.9-1.6 3.8-2.5 5.3 2.2.7 4.6 1 7.1 1 13.9.2 25.1-11 25.1-24.8 0-13.7-11.2-24.9-25-24.9"></path>
+        <path id="SocialFacebook" d="M37.6 41.7h5.2v-5c0-2.2.1-5.6 1.7-7.7 1.7-2.2 4-3.8 8-3.8 6.5 0 9.2.9 9.2.9l-1.3 7.6s-2.1-.6-4.2-.6c-2 0-3.8.7-3.8 2.7v5.8h8.2l-.6 7.5h-7.7V75h-9.7V49.1h-5.2v-7.4z"></path>
+        <path id="SocialTwitter" d="M75 36.9c-1.8.8-3.8 1.4-5.9 1.6 2.1-1.3 3.7-3.3 4.5-5.7-2 1.2-4.2 2-6.5 2.5-1.9-2-4.5-3.2-7.5-3.2-5.7 0-10.3 4.6-10.3 10.3 0 .8.1 1.6.3 2.3-8.5-.4-16.1-4.5-21.1-10.7-.9 1.5-1.4 3.3-1.4 5.2 0 3.6 1.8 6.7 4.6 8.5-1.7-.1-3.3-.5-4.6-1.3v.1c0 5 3.5 9.1 8.2 10.1-.9.2-1.8.4-2.7.4-.7 0-1.3-.1-1.9-.2 1.3 4.1 5.1 7 9.6 7.1-3.5 2.8-7.9 4.4-12.7 4.4-.8 0-1.6 0-2.4-.1 4.5 2.9 9.9 4.6 15.7 4.6 18.9 0 29.2-15.6 29.2-29.2v-1.3c1.8-1.6 3.5-3.4 4.9-5.4"></path>
+        <path id="SocialLinkedIn" d="M36 71h-9.7V39.8H36V71zm-5.1-35.1c-3.6 0-5.9-2.4-5.9-5.4 0-3.1 2.4-5.4 5.9-5.4 3.6 0 5.8 2.3 5.9 5.4 0 3.1-2.2 5.4-5.9 5.4zm44 35.1h-11V54.9c0-4.2-1.7-7.1-5.5-7.1-2.9 0-4.5 1.9-5.3 3.8-.3.7-.2 1.6-.2 2.5V71h-11s.1-28.5 0-31.1h10.9v4.9c.6-2.1 4.1-5.2 9.7-5.2 6.9 0 12.3 4.5 12.3 14.1V71z"></path>
+        <path id="SocialEmail" d="M13.1 27.5V76c0 1.4 1.2 2.6 2.6 2.6h65.8c1.4 0 2.6-1.2 2.6-2.6V27.5c0-1.4-1.2-2.6-2.6-2.6H15.7c-1.4.1-2.6 1.2-2.6 2.6zM80.2 72c.7.6.9 1.7.4 2.5-.7 1-2 1.2-2.9.4l-21.5-19c-1-.9-2.5-.9-3.4 0l-3.3 2.9c-.4.3-.8.5-1.3.5s-.9-.2-1.3-.5l-3.2-2.9c-1-.9-2.5-.9-3.4 0L19.5 74.3c-.8.7-2 .6-2.7-.2-.7-.8-.6-2 .2-2.7l20-17.7c1.2-1 1.2-2.8 0-3.9L17 32.2c-.7-.6-.9-1.7-.4-2.5.7-1 2-1.2 2.9-.4l27 24c1 .9 2.5.9 3.4 0l27.8-24.6c.9-.8 2.3-.6 2.9.4.5.8.3 1.9-.4 2.5L59.6 49.9c-1.2 1-1.2 2.8 0 3.9L80.2 72z"></path>
+      </svg>
+      <section class="staff-listing">
+            <article class="staff-member">
+              <div class="inner">
+                <h3>Anna Tilsen-Mogeni</h3>
+                <h4>Executive Director</h4><img src="https://unsplash.it/201/301" class="profile">
+                <summary>
+                  <p>My name is Anna Tilsen–Mogeni and I have been dancing Tap, Jazz, and Musical Theater since the age of 5, and teaching since I was 15. I think I have the Greatest Job in the world! That is why I started Dance–N–Magic, to be able to share my passion in an educational, family friendly environment.</p>
+                  <p>Although I am originally from St. Paul, Minnesota; I went to college in Santa Rosa, CA to receive my dance certification with a teaching emphasis. It was there that I had the opportunity to study Hip Hop in depth while dancing with Fusion 415, which was a Hip Hop crew comprised of accomplished dancers who performed with many artists, including Janet Jackson. I love dancing so much, that I still perform and compete on adult dance teams. Teaching Dancercise Kids is one of my specialties. I have taught it in mobile programing around the Twin Cities under the direction of Tessa Pfeifer, the creator of this original curriculum, music, and teaching method. I have also been a lead teacher, event coordinator, curriculum developer, competition instructor, and teacher trainer for Dance Studios in the Twin Cities, until I had the wonderful opportunity to build my own, Dance–N–Magic. My husband, Cliff, and I have 2 kids. Our daughter, Kyah, is 12 yrs. old and our son, Joshua, is 7 yrs. old. As a family, we look forward to bike riding, running or walking, traveling, reading, watching movies, and spending time together.</p>
+                </summary>
+                <summary class="contact"><a href="Yes" class="facebook">
+                    <svg viewBox="0 0 100 100">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox" class="box"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialFacebook" class="symbol"></use>
+                    </svg></a><a class="linkedin">
+                    <svg viewBox="0 0 100 100">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox" class="box"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialLinkedIn" class="symbol"></use>
+                    </svg></a>
+                </summary>
+              </div>
+            </article>
+            <article class="staff-member">
+              <div class="inner">
+                <h3>Maria Fontana</h3>
+                <h4>Dance Instructor</h4><img src="https://unsplash.it/202/302" class="profile">
+                <summary>
+                  <p>My name is Miss Maria and I have been dancing since the age of 3. I started out in ballet, jazz and tap classes. I fell in love with ballet so I began to intensely study ballet 6 days a week. I studied with the Des Moines Ballet Company under the direction of Stephen Laurent and Martha Fasai. I have had the wonderful opportunity to dance in incredible roles in Nutcracker, Cinderella, Copellia, Swan Lake and Four Sisters.</p>
+                  <p> have had the honor to train with amazing teachers at Milwaukee Ballet Company: Jeanette Marvoka, Larry Long, and Basil Thompson. Also, I was blessed to train with David Howard at Steps, various instructors at Alvin Ailey Dance Center and Broadway Dance Center in NYC. I have been teaching ballet, Pointe, jazz, lyrical and tap dance for the past 13 years around the Twin Cities area. Along with dancing, I have done freelance artwork for Concord Jazz Label, Color Wheel Art Gallery, Courage Center, dance studios and Dance apparel shops. I am looking forward to working with Diversity Alive Theater Group. I am looking forward to learning new dance styles, new faces and growing with the Exciting–Amazing–New DANCE–n–MAGIC!!!!!</p>
+                </summary>
+                <summary class="contact"><a class="linkedin">
+                    <svg viewBox="0 0 100 100">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox" class="box"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialLinkedIn" class="symbol"></use>
+                    </svg></a><a class="twitter">
+                    <svg viewBox="0 0 100 100">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox" class="box"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialTwitter" class="symbol"></use>
+                    </svg></a>
+                </summary>
+              </div>
+            </article>
+            <article class="staff-member">
+              <div class="inner">
+                <h3>Elajae’ Golden</h3>
+                <h4>Dance Instructor</h4><img src="https://unsplash.it/203/303" class="profile">
+                <summary>
+                  <p>I moved to Saint Paul, MN when I was 10 months from Hammond IN. I’ve been dancing for 7 years, I graduated from Saint Paul Conservatory for Performing Artist. I am self taught, I taught myself Hip Hop dance by just watching dance movies and YouTube videos. That’s when I discovered my love and passion for dance so I continued my journey by going to an performing arts school, where I also was trainned in Ballet, Jazz, Hip-Hop, Tap, Modern, Afro-Modern and West African. My dream goal is to become a TV star dancing in dance movies and commercial work. Being an instructor at Dance-N-Magic is a great way to pass on my knowledge and love for dance to my fellow students.</p>
+                </summary>
+                <summary class="contact"><a class="linkedin">
+                    <svg viewBox="0 0 100 100">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox" class="box"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialLinkedIn" class="symbol"></use>
+                    </svg></a><a class="email">
+                    <svg viewBox="0 0 100 100">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox" class="box"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialEmail" class="symbol"></use>
+                    </svg></a>
+                </summary>
+              </div>
+            </article>
+            <article class="staff-member">
+              <div class="inner">
+                <h3>Kelsey Setter</h3>
+                <h4>Dance Instructor</h4><img src="https://unsplash.it/204/304" class="profile">
+                <summary>
+                  <p>I have been dancing since I could walk, driving my parents insane and they decided to put me into real dance classes. I have trained at dance studios in the Twin Cities and Broadway Dance Center in New York City. I have had the privilege of working with some amazing dancers and choreographers such as Luam, Shane Sparks, Brian Friedman, Mia Michaels, Wade Robson, Courtney Miller Jr., and many others.</p>
+                </summary>
+                <summary class="contact"><a class="linkedin">
+                    <svg viewBox="0 0 100 100">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox" class="box"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialLinkedIn" class="symbol"></use>
+                    </svg></a><a class="email">
+                    <svg viewBox="0 0 100 100">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox" class="box"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialEmail" class="symbol"></use>
+                    </svg></a>
+                </summary>
+              </div>
+            </article>
+            <article class="staff-member">
+              <div class="inner">
+                <h3>Lasha Tilsen-Toles</h3>
+                <h4>Office Manager and Teaching Assistant</h4><img src="https://unsplash.it/205/305" class="profile">
+                <summary>
+                  <p>I have been dancing since I could walk, driving my parents insane and they decided to put me into real dance classes. I have trained at dance studios in the Twin Cities and Broadway Dance Center in New York City. I have had the privilege of working with some amazing dancers and choreographers such as Luam, Shane Sparks, Brian Friedman, Mia Michaels, Wade Robson, Courtney Miller Jr., and many others.</p>
+                </summary>
+                <summary class="contact"><a href="Yes" class="facebook">
+                    <svg viewBox="0 0 100 100">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox" class="box"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialFacebook" class="symbol"></use>
+                    </svg></a><a class="twitter">
+                    <svg viewBox="0 0 100 100">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox" class="box"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialTwitter" class="symbol"></use>
+                    </svg></a><a class="email">
+                    <svg viewBox="0 0 100 100">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox" class="box"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialEmail" class="symbol"></use>
+                    </svg></a>
+                </summary>
+              </div>
+            </article>
+            <article class="staff-member">
+              <div class="inner">
+                <h3>Jamie Givens</h3>
+                <h4>Office Manager</h4><img src="https://unsplash.it/206/306" class="profile">
+                <summary>
+                  <p>I am a Dance Mom of 2 students at Dance-N-Magic. I will be available to assist you in the office. I look forward to meeting you!</p>
+                </summary>
+                <summary class="contact"><a href="Yes" class="facebook">
+                    <svg viewBox="0 0 100 100">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox" class="box"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialFacebook" class="symbol"></use>
+                    </svg></a><a class="linkedin">
+                    <svg viewBox="0 0 100 100">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox" class="box"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialLinkedIn" class="symbol"></use>
+                    </svg></a><a class="twitter">
+                    <svg viewBox="0 0 100 100">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox" class="box"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialTwitter" class="symbol"></use>
+                    </svg></a><a class="pinterest">
+                    <svg viewBox="0 0 100 100">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox" class="box"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialPinterest" class="symbol"></use>
+                    </svg></a><a class="email">
+                    <svg viewBox="0 0 100 100">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialBox" class="box"></use>
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#SocialEmail" class="symbol"></use>
+                    </svg></a>
+                </summary>
+              </div>
+            </article>
+      </section>
+    </main>
+    <footer>
+      <div class="inner">
+        <section><a href="https://www.google.com/maps/place/Dance-N-Magic/@44.9467784,-93.1409836,17z" class="address"><img src="/svg/gmap.svg" class="logo">
+            <address><span>Dance N Magic</span><span>913 Selby Ave</span><span>St. Paul, MN 55104</span></address></a></section>
+        <section class="contact email"><a href="mailto:info@dance-n-magic.com" class="email">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <path d="M53.5 5.97c-8.5 0-16.5 2-24 6.5s-13.5 10.5-18 18S5 45.97 5 53.97c0 11.5 4 21 12.5 28.5s19.5 11.5 33 11.5c9 0 17-1.5 23.5-4.5 2-1 3-3 2.5-5.5-1-2-3-3-5.5-2.5-6 2.5-13 4-20.5 4-6 0-11.5-1.5-17-4s-10-6.5-13.5-11.5-5-10.5-5-16.5c0-6.5 1.5-12.5 5-18.5s8-11 14-15 12.5-6 19-6c9 0 16.5 3 23.5 8.5 7 6 10.5 12.5 10.5 20 0 6-1.5 11.5-5 16s-7 7-10.5 7c-3 0-5-1.5-5-4.5 0-1 0-2.5.5-4l6.5-23.5c.5-2.5-1-4.5-3.5-4.5s-5 2-6 4.5l-.5 1.5c-1-2.5-2.5-4.5-4.5-5.5-1.5-1-4-1.5-6.5-1.5-4.5 0-9 1-12.5 3.5s-7.5 6.5-9.5 10.5c-2.5 5.5-3.5 9-3.5 15 0 4.5 1.5 9 5 12 3 3.5 7 5 11.5 5 6 0 11-2.5 15-7.5.5 2 2 4 4.5 5.5 2 1.5 5 2 8 2 2.5 0 5.5-.5 8.5-2s5.5-3.5 8-6 4.5-5.5 6-9.5 2.5-8 2.5-12.5c0-12-4-21-12-28.5-7.5-6-17.5-9.5-30.5-9.5zm-.5 30c2.5 0 4.5 1 6 2.5s2 4 2 7.5c0 4.5-1.5 9-4.5 13.5s-6.5 7-10.5 7c-2.5 0-4.5-1-6-3s-2-4.5-2-7.5c0-5 1.5-9.5 4.5-14 3.5-4 7-6 10.5-6z"></path>
+            </svg><span>info@dance-n-magic.com</span></a></section>
+        <section class="contact phone"><a href="tel:651-688-3448" class="phone">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <path d="M91.7 67.6c-6.4 0-12.5-1-18.3-2.9-1.8-.5-3.8-.1-5.2 1.2L57 77.2C42.5 69.8 30.7 58 23.3 43.5l11.2-11.3c1.4-1.3 1.8-3.3 1.3-5.1-1.9-5.7-2.9-11.9-2.9-18.2 0-2.8-2.3-5.1-5.1-5.1H9.9c-2.8-.1-5.1 2.2-5.1 5 0 48 38.9 86.9 86.9 86.9 2.8 0 5.1-2.3 5.1-5.1V72.8c.1-2.9-2.3-5.2-5.1-5.2z"></path>
+            </svg><span>(651) 688-3448</span></a></section>
+        <section class="social"><a href="https://www.facebook.com/pages/Dance-N-Magic/224263814671" class="facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <path d="M91.6 3.8H9.9c-2.8 0-5.1 2.3-5.1 5.1v81.7c0 2.8 2.3 5.1 5.1 5.1h44V60.2h-12V46.3h12V36.1c0-11.8 7.2-18.3 17.8-18.3 5.1 0 9.4.3 10.7.5v12.3h-7.3c-5.8 0-6.9 2.8-6.9 6.8v8.9h13.7l-1.8 13.9H68.2v35.5h23.4s5.1-2.2 5.1-5V8.9c0-2.8-2.3-5.1-5.1-5.1z" class="box"></path>
+            </svg></a><a href="http://instagram.com/dancenmagic/" class="instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <path d="M85.9 3.8H15.7c-6 0-10.9 4.9-10.9 10.9v70.2c0 6 4.9 10.9 10.9 10.9h70.1c6 0 10.9-4.9 10.9-10.9V14.7c.1-6-4.8-10.9-10.8-10.9zM68.7 16.9c0-1.4 1.2-2.6 2.6-2.6h12.4c1.4 0 2.6 1.1 2.6 2.6v12.4c0 1.4-1.2 2.6-2.6 2.6H71.3c-1.4 0-2.6-1.1-2.6-2.6V16.9zM50.9 32.3c9.8 0 17.7 7.9 17.7 17.7 0 9.7-7.9 17.7-17.7 17.7-9.8 0-17.7-7.9-17.7-17.7 0-9.8 7.9-17.7 17.7-17.7zm35.6 50.2c0 1.4-1.2 2.6-2.6 2.6h-66c-1.4 0-2.6-1.1-2.6-2.6v-40h8.6c-.6 2.4-1 4.8-1 7.4 0 15.4 12.6 27.9 28 27.9s28-12.5 28-27.9c0-2.6-.3-5-1-7.4h8.6v40z" class="camera"></path>
+            </svg></a></section>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript"></script>
+    <script src="js/min/dance.min.js?updated=11.10.2015" type="text/javascript"></script>
+  </body>
+</html>

@@ -1,11 +1,18 @@
-.class-finder:after {
+.class-finder:after, section.instructors:after, section.faq:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.class-finder, .featured-class, .class, .event {
+.class-finder, .featured-class, .class, .event, .staff-member {
   border: 1px solid #393939;
+}
+
+section.instructors, section.faq dl {
+  margin: 2rem 4rem;
+  background: white;
+  padding: 2rem;
+  border: 1px solid rgba(19, 19, 19, 0.5);
 }
 
 * {
@@ -48,6 +55,8 @@ form,
 h1,
 h2,
 h3,
+section.faq dt.question,
+section.faq dd.answer:before,
 h4,
 h5,
 h6,
@@ -204,19 +213,21 @@ body {
   color: #131313;
 }
 
-h1, h2, h3 {
+h1, h2, h3, section.faq dt.question, section.faq dd.answer:before {
   font-weight: 300;
 }
 
 h1 {
   font-size: 3.4rem;
+  margin-bottom: 0.5em;
 }
 
 h2 {
   font-size: 2.5rem;
+  margin-bottom: 0.5em;
 }
 
-h3 {
+h3, section.faq dt.question, section.faq dd.answer:before {
   font-size: 1.9rem;
 }
 
@@ -246,6 +257,19 @@ button:hover, .button:hover {
 button:active, .button:active {
   background-color: #063927;
   box-shadow: inset 0.2em 0.2em 0.1em black;
+}
+
+button.alternate, .button.alternate {
+  background-color: #ab37c0;
+  color: #131313;
+}
+
+button.alternate:hover, .button.alternate:hover {
+  background-color: #be5ad0;
+}
+
+button.alternate:active, .button.alternate:active {
+  background-color: #b440c8;
 }
 
 a {
@@ -393,7 +417,7 @@ footer .address img.logo {
   width: 2rem;
   width: 2rem;
   position: absolute;
-  top: 1.75rem;
+  top: 0.65rem;
 }
 
 footer .address address {
@@ -495,7 +519,7 @@ footer .social a:hover.instagram {
   padding: 2em;
 }
 
-.featured-class h3 {
+.featured-class h3, .featured-class section.faq dt.question, section.faq .featured-class dt.question, .featured-class section.faq dd.answer:before, section.faq .featured-class dd.answer:before {
   padding-bottom: 0.5em;
 }
 
@@ -537,16 +561,16 @@ footer .social a:hover.instagram {
   z-index: 3;
 }
 
-.class h3 {
+.class h3, .class section.faq dt.question, section.faq .class dt.question, .class section.faq dd.answer:before, section.faq .class dd.answer:before {
   margin-bottom: 0.5em;
 }
 
-.class h3 a {
+.class h3 a, .class section.faq dt.question a, section.faq .class dt.question a, .class section.faq dd.answer:before a, section.faq .class dd.answer:before a {
   text-decoration: none;
   display: block;
 }
 
-.class h3 a:hover {
+.class h3 a:hover, .class section.faq dt.question a:hover, section.faq .class dt.question a:hover, .class section.faq dd.answer:before a:hover, section.faq .class dd.answer:before a:hover {
   text-decoration: underline;
 }
 
@@ -762,16 +786,28 @@ main.events h1 {
   margin-right: 1em;
   margin-bottom: 2em;
   background-color: white;
-  padding: 1em;
+  padding: 1em 1em 3em 1em;
   position: relative;
 }
 
-.event h3 {
+.event h3, .event section.faq dt.question, section.faq .event dt.question, .event section.faq dd.answer:before, section.faq .event dd.answer:before {
   margin-bottom: 0.5em;
+}
+
+.event h3 a, .event section.faq dt.question a, section.faq .event dt.question a, .event section.faq dd.answer:before a, section.faq .event dd.answer:before a {
+  text-decoration: none;
+}
+
+.event h3 a:hover, .event section.faq dt.question a:hover, section.faq .event dt.question a:hover, .event section.faq dd.answer:before a:hover, section.faq .event dd.answer:before a:hover {
+  text-decoration: underline;
 }
 
 .event .cover {
   margin-bottom: 0.5rem;
+}
+
+.event .glance {
+  margin-bottom: 1em;
 }
 
 .event time {
@@ -790,6 +826,15 @@ main.events h1 {
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.event.special {
+  background: #393939;
+  color: white;
+}
+
+.event.special h3 a, .event.special section.faq dt.question a, section.faq .event.special dt.question a, .event.special section.faq dd.answer:before a, section.faq .event.special dd.answer:before a {
+  color: #ab37c0;
 }
 
 .special-event {
@@ -815,6 +860,117 @@ main.events h1 {
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+section.instructors .cover {
+  float: left;
+  max-width: 320px;
+  margin-right: 1rem;
+}
+
+section.faq dt.question {
+  color: #084932;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+section.faq dt.question:before {
+  content: 'Q: ';
+  font-weight: 700;
+}
+
+section.faq dt.question:hover {
+  text-decoration: underline;
+}
+
+section.faq dd.answer {
+  padding-left: 4rem;
+  position: relative;
+  display: none;
+}
+
+section.faq dd.answer:before {
+  content: 'A:';
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  left: 0.85em;
+}
+
+.staff-listing {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: strech;
+  -ms-flex-align: strech;
+  align-items: strech;
+}
+
+.staff-member {
+  flex-basis: calc(500px);
+  flex-grow: 1;
+  flex-shrink: 1;
+  align-self: auto;
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 2em;
+  background-color: white;
+  padding: 1em;
+  position: relative;
+}
+
+.staff-member h4 {
+  margin-bottom: 1em;
+}
+
+.staff-member .profile {
+  float: right;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.staff-member .contact > a {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  margin-right: 0.5em;
+}
+
+.staff-member .contact > a .symbol {
+  fill: white;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.staff-member .contact > a.facebook .box {
+  fill: #3b5998;
+}
+
+.staff-member .contact > a.linkedin .box {
+  fill: #007bb5;
+}
+
+.staff-member .contact > a.twitter .box {
+  fill: #00aced;
+}
+
+.staff-member .contact > a.pinterest .box {
+  fill: #cb2027;
+}
+
+.staff-member .contact > a.email .box {
+  fill: #084932;
+}
+
+.staff-member .contact > a:hover .symbol {
+  transform: rotate(360deg);
 }
 
 main.home {

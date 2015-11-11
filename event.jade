@@ -1,0 +1,24 @@
+-var thisPage = "Event"
+doctype html
+html(lang="en")
+  head
+    include ./jade/head.jade
+  body
+    include ./jade/header.jade
+    main.classpage
+      img.cover(src="https://unsplash.it/320/280/?random")
+      h1 Hip Hop Nutcracker Master Class with cast member Robert Taylor Jr.
+      p Dance-N-Magic will be hosting a special Master Class when the Hip Hop Nutcracker comes to the Ordway! This 2 hour master class is welcoming to all levels of dancers! Taught by cast member Robert Taylor Jr.
+      //p Suspendisse porttitor urna vitae ornare auctor. Aliquam erat volutpat. Nullam eget viverra sem. Duis in turpis et ligula sollicitudin dictum in in sem. Vestibulum vel lorem id enim bibendum porta a sed nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ac consectetur metus, convallis gravida orci. Cras pulvinar nulla et nisl rutrum, sed sodales magna hendrerit.
+      .under-summary
+        .duration
+          | Monday, November 23rd
+        .times
+          span.time.start 6:00PM
+          | -
+          span.time.end 8:00PM
+        .tuition
+          span.price $35
+        .register-holder
+          a.button.jackrabbit(href="http://app.jackrabbitclass.com/reg.asp?id=505314&preLoadClassID=4672036") REGISTER NOW
+    include ./jade/footer.jade
