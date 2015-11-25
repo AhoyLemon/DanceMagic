@@ -1,0 +1,8 @@
+.contact-info { @include flex-container(); padding-bottom:($base-margin / 2); line-height: 160%; font-size:1.5em;
+  a { @extend %styled-hover; }
+  span { display: block; }
+  .physical-address, .phone-and-email { @include flex-split(50%, 100%); }
+  @include respondTo(desktop) {
+    .phone-and-email { text-align: right; }
+  }
+}

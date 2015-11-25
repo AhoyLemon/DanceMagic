@@ -38,6 +38,8 @@ $pinterest-color:#cb2027;
 
 //MEASUREMENTS
 $base-margin:4rem;
+$mobile-max:600px;
+$desktop-min: ($mobile-max + 1px);
 
 // ANIMATIONS
 $easeBounce: cubic-bezier(0, 2, 1, 1);

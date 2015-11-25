@@ -1,5 +1,5 @@
 section.instructors { @extend %clearfix; @extend %focus-box;
-  .cover { float: left; max-width: 320px; margin-right: 1rem; }
+  .cover { @include float-desktop(left); }
 }
 section.faq { @extend %clearfix;
   
@@ -13,12 +13,12 @@ section.faq { @extend %clearfix;
   }
 }
 
-.staff-listing { @include flex-container(); }
+.staff-listing { @include flex-container(); margin-left: -1em; margin-right: -1em; }
 .staff-member { @include flex-item(calc(500px)); margin-left: 1em; margin-right: 1em; margin-bottom: 2em; background-color:white; padding: 1em; position: relative;  @extend %border;
   h4 { margin-bottom: 1em; }
   .profile { float: right; margin-left: 1rem; margin-bottom: 1rem; }
   .contact {
-    > a { display: inline-block; width: 2em; height: 2em; margin-right: 0.5em;
+    a { display: inline-block; width: 2em; height: 2em; margin-right: 0.5em;
       .symbol { fill:white; transition:all 0.3s ease; transform-origin: center; }
       &.facebook .box { fill:$facebook-color; }
       &.linkedin .box { fill:$linkedin-color; }

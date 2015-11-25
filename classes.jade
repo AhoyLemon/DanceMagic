@@ -7,7 +7,7 @@ html(lang="en")
   body
     include ./jade/header.jade
     main.classes
-      h1 FIND A CLASS
+      h1 Find A Class
       .class-finder
         .criteria.age
           label age
@@ -37,36 +37,36 @@ html(lang="en")
           summary
             p Quisque vel metus at sem venenatis consequat eu sed dui. Sed eu nunc sit amet diam tincidunt sodales. Etiam eu dapibus nulla, et aliquam ex. Morbi sit amet nisi pellentesque, tristique justo nec, lacinia mi. Morbi convallis sit amet neque et finibus.
           .button-holder
-            a.button SIGN UP
-        +class("Dancercise Kids", "Mondays", "2", "6", "", "Sept 8th", "June 12th", "5:50pm", "6:20pm", "$43")
+            a.button(href="class.html") SIGN UP
+        +class("Dancercise Kids", "Mondays", "2", "6", "", "Sept 8th", "June 12th", "5:50pm", "6:20pm", "$43", "session")
           p High Energy, Fun, and Educational way to Learn Dance Extended Tap for ages 3+
-        +class("Ext Tap", "Mondays", "3","6", "", "Sept 8th", "June 12th", "6:20pm", "6:30pm", "$8", true)
+        +class("Ext Tap", "Mondays", "3","6", "", "Sept 8th", "June 12th", "6:20pm", "6:30pm", "$8", "class", true)
           p Reduces to $6/month add on, Optional Extended Tap for Students age 3-6 Must be enrolled in a Dancercise class.
-        +class("Tap, Jazz & Ballet Combo", "Tuesdays", "4", "6", "", "Sept 8th", "June 12th", "5:30pm", "6:30pm", "$59")
+        +class("Tap, Jazz & Ballet Combo", "Tuesdays", "4", "6", "", "Sept 8th", "June 12th", "5:30pm", "6:30pm", "$59", "month")
           p Fun Combo class for Beginners
-        +class("Hip Hop", "Fridays", "4", "6", "", "Sept 8th", "June 12th", "5:30pm", "6:00pm", "$43")
+        +class("Hip Hop", "Fridays", "4", "6", "", "Sept 8th", "June 12th", "5:30pm", "6:00pm", "$43", "session")
           p Fun Hip Hop focused class for Beginners
-        +class("Ballet", "Thursdays", "4", "6", "", "Sept 8th", "June 12th", "5:30pm","6:00pm", "$43", true)
+        +class("Ballet", "Thursdays", "4", "6", "", "Sept 8th", "June 12th", "5:30pm","6:00pm", "$43", "month", true)
           p Fun Ballet Focused Class for Beginners
-        +class("Tumbling & Acrobatics", "Wednesdays", "4", "6", "", "Sept 8th", "June 12th", "5:30pm", "6:00pm", "$43")
+        +class("Tumbling & Acrobatics", "Wednesdays", "4", "6", "", "Sept 8th", "June 12th", "5:30pm", "6:00pm", "$43", "month")
           p Learn Tumbling and Acrobatic Dance Style
-        +class("Petite Elite Performance Team", "Thursdays", "5", "8", "", "Sept 8th", "June 12th", "5:30pm", "6:00pm", "$59")
+        +class("Petite Elite Performance Team", "Thursdays", "5", "8", "", "Sept 8th", "June 12th", "5:30pm", "6:00pm", "$59", "week")
           p Instrutor invite ONLY, additional pre-team required
-        +class("Hip Hop Performance Team", "Thursdays", "6","15", "M", "Sept 8th", "June 12th", "6:45pm", "7:45pm", "$59")
+        +class("Hip Hop Performance Team", "Thursdays", "6","15", "M", "Sept 8th", "June 12th", "6:45pm", "7:45pm", "$59", "class")
           p Commitment based, additional break tech req.
-        +class("Pre-Team Ballet & Jazz", "Thursdays", "6","10", "", "Sept 8th", "June 12th", "6:30pm", "7:30pm", "$59", true)
+        +class("Pre-Team Ballet & Jazz", "Thursdays", "6","10", "", "Sept 8th", "June 12th", "6:30pm", "7:30pm", "$59", "session", true)
           p Intermediate Level- Focus on Technique and Performance Skills
-        +class("Beginner Ballet: Lyrical & Technique", "Mondays", "7", "10", "", "Sept 8th", "June 12th", "5:00pm", "7:30pm", "$59", true)
+        +class("Beginner Ballet: Lyrical & Technique", "Mondays", "7", "10", "", "Sept 8th", "June 12th", "5:00pm", "7:30pm", "$59", "session", true)
           p Intermediate Level- Focus on Technique and Performance Skills
-        +class("Intermediate Tap, Jazz & Ballet Combo", "Tuesdays", "8", "17", "", "Sept 8th", "June 12th", "6:30pm", "7:30pm", "$59")
+        +class("Intermediate Tap, Jazz & Ballet Combo", "Tuesdays", "8", "17", "", "Sept 8th", "June 12th", "6:30pm", "7:30pm", "$59", "month")
           p Fun Combo Class that works on skills at an Intermediate level
-        +class("Intermediate Breakdance", "Fridays", "8", "17", "", "Sept 8th", "June 12th", "6:00pm", "6:45pm", "$53")
+        +class("Intermediate Breakdance", "Fridays", "8", "17", "", "Sept 8th", "June 12th", "6:00pm", "6:45pm", "$53", "week")
           p Build your break dance technique and Choreography at an Intermediate level
-        +class("Junior Elite Performance Team", "Thursdays", "9", "12", "", "Jan 1st", "Feb 24th", "6:30pm", "7:30pm", "$145")
+        +class("Junior Elite Performance Team", "Thursdays", "9", "12", "", "Jan 1st", "Feb 24th", "6:30pm", "7:30pm", "$145", "month")
           p $145 for the entire 8 week session. Sign up for 2 sessions and get the second 25% off. Beginner & Intermediate Level Hip Hop for Adults and Older Teens
-        +class("Adult Hip Hop", "Wednesdays", "16", "99", "", "Jan 1st", "Feb 24th", "6:30pm", "7:30pm", "$145")
+        +class("Adult Hip Hop", "Wednesdays", "16", "99", "", "Jan 1st", "Feb 24th", "6:30pm", "7:30pm", "$145", "session")
           p $145 for the entire 8 week session. Sign up for 2 sessions and get the second 25% off. Beginner & Intermediate Level Hip Hop for Adults and Older Teens
-        +class("Adult Tap", "Tuesdays", "16", "99", "", "Sept 8th", "June 12th", "7:30pm", "8:30pm", "$59")
+        +class("Adult Tap", "Tuesdays", "16", "99", "", "Sept 8th", "June 12th", "7:30pm", "8:30pm", "$59", "week")
           p Mixed level class will enjoy tap technique and combos
     include ./jade/footer.jade
     

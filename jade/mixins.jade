@@ -1,5 +1,5 @@
 -var n = 0;
-mixin class(name, day, minage, maxage, gender, startdate, enddate, starttime, endtime, price, image)
+mixin class(name, day, minage, maxage, gender, startdate, enddate, starttime, endtime, price, costper, image)
   -n++
   article.class(min-age="#{minage}" max-age="#{maxage}" gender="#{gender}" day="#{day}")
     if image
@@ -38,6 +38,7 @@ mixin class(name, day, minage, maxage, gender, startdate, enddate, starttime, en
           span.time.end= endtime
         .tuition
           span.price= price
+          span.costper= costper
         .signup
           a.button(href="class.html") Learn More
 

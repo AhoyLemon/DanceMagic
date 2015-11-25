@@ -2,14 +2,11 @@ main.events {
   h1 { margin-bottom: 0.5em; }
 }
 
-.event-listing { @include flex-container(); margin-left: -1em; margin-right: -1em; }
+.event-listing { @include flex-container(); }
 
-.event { @include flex-item(calc(33.3333% - 2em)); margin-left: 1em; margin-right: 1em; margin-bottom: 2em; background-color:white; padding: 1em 1em 3em 1em; position: relative; @extend %border;
-  h3 { margin-bottom: 0.5em;
-    a { text-decoration: none;
-      &:hover { text-decoration: underline; }
-    }
-  }
+.event { @include flex-split(calc(33.3333% - 2em), 100%); margin-bottom: 2em; background-color:white; padding: 1em 1em 3em 1em; position: relative; @extend %border;
+  h3 { margin-bottom: 0.5em; }
+  a { @extend %styled-hover; }
   .cover { margin-bottom: 0.5rem; }
   .glance { margin-bottom: 1em; }
   time { display: block; }
@@ -18,12 +15,11 @@ main.events {
   
   
   &.special { background:$border-color; color:white;
-    h3 a { color: $light-purple; }
+    h3 a { color: $light-purple; border-color:$light-purple; }
   }
-  
 }
 
-.special-event { @include flex-item(calc(33.3333% - 2em)); margin-left: 1em; margin-right: 1em; margin-bottom: 2em; background:$border-color; position:relative;
-  .inner { padding: 1em; color:white; text-shadow: 1px 1px 0 black; }
-  button, .button { position: absolute; right:0; bottom:0; left:0; }
+@include respondTo(desktop) {
+  .event-listing { margin-left: -1em; margin-right: -1em; }
+  .event { margin-left: 1em; margin-right: 1em; }
 }

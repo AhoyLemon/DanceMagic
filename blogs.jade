@@ -1,0 +1,76 @@
+-var thisPage = "Blogs"
+doctype html
+html(lang="en")
+  head
+    include ./jade/head.jade
+  body
+    include ./jade/header.jade
+    main.blogs
+      h1 Blog Posts
+      section.blog-listing
+        article.blog-summary
+          a(href="blog.html")
+            img.cover(src="http://unsplash.it/300")
+          h2 
+            a(href="blog.html") Title of the Particular Blog Post
+          .posted
+            label Posted
+            time November 11th, 2015 @ 9:35 PM
+          summary
+            p Maecenas vestibulum dictum nunc, at aliquet lectus varius eu. Nullam a facilisis purus, eu mattis nisi. Praesent eget velit et risus facilisis lobortis at ac arcu. Vivamus lacinia, ex in condimentum mollis, augue ante scelerisque felis, nec dapibus leo lacus sed elit. Praesent ultrices interdum bibendum. Sed in semper nisl, a gravida urna. Nullam quam mi, dapibus id metus sit amet, molestie pretium est.
+          .tags
+            span.label Tagged with:
+            a.tag Nulla efficitur
+            a.tag Donec pellentesque tellus
+            a.tag Cras
+            a.tag tellus massa
+        article.blog-summary
+          a(href="blog.html")
+            img.cover(src="http://unsplash.it/290")
+          h2 
+            a(href="blog.html") Title of the Particular Blog Post
+          .posted
+            label Posted
+            time October 27th, 2015 @ 6:45 AM
+          summary
+            p Maecenas vestibulum dictum nunc, at aliquet lectus varius eu. Nullam a facilisis purus, eu mattis nisi. Praesent eget velit et risus facilisis lobortis at ac arcu. Vivamus lacinia, ex in condimentum mollis, augue ante scelerisque felis, nec dapibus leo lacus sed elit. Praesent ultrices interdum bibendum. Sed in semper nisl, a gravida urna. Nullam quam mi, dapibus id metus sit amet, molestie pretium est.
+          .tags
+            span.label Tagged with:
+            a.tag Nulla efficitur
+            a.tag Donec pellentesque tellus
+            a.tag Cras
+            a.tag tellus massa
+        article.blog-summary
+          a(href="blog.html")
+            img.cover(src="http://unsplash.it/310")
+          h2 
+            a(href="blog.html") Title of the Particular Blog Post
+          .posted
+            label Posted
+            time October 3rd, 2015 @ 11:11 AM
+          summary
+            p Maecenas vestibulum dictum nunc, at aliquet lectus varius eu. Nullam a facilisis purus, eu mattis nisi. Praesent eget velit et risus facilisis lobortis at ac arcu. Vivamus lacinia, ex in condimentum mollis, augue ante scelerisque felis, nec dapibus leo lacus sed elit. Praesent ultrices interdum bibendum. Sed in semper nisl, a gravida urna. Nullam quam mi, dapibus id metus sit amet, molestie pretium est.
+          .tags
+            span.label Tagged with:
+            a.tag Nulla efficitur
+            a.tag Donec pellentesque tellus
+            a.tag Cras
+            a.tag tellus massa
+        article.blog-summary
+          a(href="blog.html")
+            img.cover(src="http://unsplash.it/315")
+          h2 
+            a(href="blog.html") Title of the Particular Blog Post
+          .posted
+            label Posted
+            time October 3rd, 2015 @ 11:11 AM
+          summary
+            p Maecenas vestibulum dictum nunc, at aliquet lectus varius eu. Nullam a facilisis purus, eu mattis nisi. Praesent eget velit et risus facilisis lobortis at ac arcu. Vivamus lacinia, ex in condimentum mollis, augue ante scelerisque felis, nec dapibus leo lacus sed elit. Praesent ultrices interdum bibendum. Sed in semper nisl, a gravida urna. Nullam quam mi, dapibus id metus sit amet, molestie pretium est.
+          .tags
+            span.label Tagged with:
+            a.tag Nulla efficitur
+            a.tag Donec pellentesque tellus
+            a.tag Cras
+            a.tag tellus massa
+      include ./jade/signup.jade
+    include ./jade/footer.jade

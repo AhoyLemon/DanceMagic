@@ -1,0 +1,25 @@
+-var thisPage = "Contact Us"
+-var lastUpdated = "11.01.2015"
+doctype html
+html(lang="en")
+  head
+    include ./jade/head.jade
+  body
+    include ./jade/header.jade
+    main.contact-page
+      h1= thisPage
+      section.contact-info
+        .physical-address
+          a.address(href="https://www.google.com/maps/place/913+Selby+Ave,+St+Paul,+MN+55104/@44.946851,-93.1409948,17z/data=!3m1!4b1!4m2!3m1!1s0x87f62a62b943771d:0x79a4259612d4364")
+            span 913 Selby Ave.
+            span St. Paul, MN 55104
+        .phone-and-email
+          span
+            a(href="mailto:info@dance-n-magic.com") info@dance-n-magic.com
+          span
+            a(href="tel:651-688-3448") 651-688-3448
+      //p Suspendisse porttitor urna vitae ornare auctor. Aliquam erat volutpat. Nullam eget viverra sem. Duis in turpis et ligula sollicitudin dictum in in sem. Vestibulum vel lorem id enim bibendum porta a sed nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ac consectetur metus, convallis gravida orci. Cras pulvinar nulla et nisl rutrum, sed sodales magna hendrerit.
+      section
+        iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2823.843418381653!2d-93.14099478463919!3d44.94685097583531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f62a62b943771d%3A0x79a4259612d4364!2s913+Selby+Ave%2C+St+Paul%2C+MN+55104!5e0!3m2!1sen!2sus!4v1447534201493" 
+        width="100%" height="600" frameborder="0" style="border:0" allowfullscreen)
+    include ./jade/footer.jade
