@@ -1,0 +1,35 @@
+.blog-summary { @extend %clearfix; padding:($base-margin / 2); border:1px solid $black; margin-bottom: $base-margin; background-color:white;
+  h2 { margin-bottom: 0;
+    a { @extend %styled-hover; }
+  } 
+  .posted { font-weight: $bold; font-size:0.85em; margin-bottom: 1.5em; }
+  .cover { @include float-desktop(left); }
+}
+
+
+.blog-signup { border-top:1px solid $black;
+  .form-holder { @extend %focus-box; }
+  form { max-width: 320px; @include flex-container(); margin-left: auto; margin-right: auto;
+    .full-width { @include flex-item(100%); }
+    .half-width { @include flex-item(50%); }
+  }
+  input[type="email"] { font-family: $font; line-height: 200%; padding-left: 0.5em; padding-right: 0.5em; font-size:1.5em; display:block; width: 100%; }
+  label { cursor: pointer;
+    span { font-size:0.7em; }
+  }
+  button[type="submit"] { display:block; width: 100%; }
+  
+  @include respondTo(desktop) {
+    margin-left: -$base-margin; margin-right: -$base-margin;
+  }
+}
+
+.blog-post { @extend %clearfix; padding-bottom: $base-margin;
+  h1 { margin-bottom: 0; }
+  .by-line { margin-bottom: 1.5em; text-align: right; 
+    span, time { font-weight: $bold; }
+  }
+  img.left { float: left; margin-right: 1rem; margin-bottom: 1rem; }
+  img.right { float: right; margin-left: 1rem; margin-bottom: 1rem; }
+  img.centered { display: block; margin-left: auto; margin-right: auto; margin-bottom: 1rem; }
+}

@@ -1,0 +1,45 @@
+// FONTS
+$font: 'Raleway', sans-serif;
+$font-size:16px;
+$light:300;
+$normal:400;
+$bold:700;
+
+// COLORS
+$purple:#865F8C;
+$yellow:#DFB440;
+$green:#084932;
+$purple-alt:#BF29D9;
+$green-alt:#0FA678;
+$light-grey:#ededed;
+$black:#131313;
+$white:#dfdfdf;
+
+
+$dark-purple:#380f47;
+$light-purple:#ab37c0;
+$pink:#ffe9fe;
+
+// COLOR UTILITIES
+$header-color: $purple;
+$footer-color: $purple;
+$body-color: $light-grey;
+$link-color:$green;
+$border-color:lighten($black,15%);
+
+//BRAND COLORS
+$facebook-color:#3b5998;
+$instagram-color:#fb3958;
+$twitter-color:#00aced;
+$googleplus-color:#dd4b39;
+$youtube-color:#bb0000;
+$linkedin-color:#007bb5;
+$pinterest-color:#cb2027;
+
+//MEASUREMENTS
+$base-margin:4rem;
+$mobile-max:600px;
+$desktop-min: ($mobile-max + 1px);
+
+// ANIMATIONS
+$easeBounce: cubic-bezier(0, 2, 1, 1);

@@ -1,0 +1,74 @@
+footer { background-color:$dark-purple; color:$pink;
+  a { color:$pink; text-decoration: none; cursor: pointer;
+    svg * { fill:currentColor; }
+  }
+  .inner { @include flex-container();
+    section { @include flex-item(25%);}
+  }
+  
+  .contact { text-align: center; }
+  .social { 
+    a { display: inline-block;
+      &:hover {
+        &.facebook { color:$facebook-color; }
+        &.instagram { color:$instagram-color; }
+      }
+    }
+  }
+}
+
+@media (max-width:$mobile-max) {
+  footer { padding:2em 1em 4em 1em;
+    address { display: none; }
+    .contact {
+      span { display: none; }
+    }
+    section:not(.social) { @include flex-item(20%); padding-left: 1em; padding-right: 1em; }
+    section.social { @include flex-item(40%); padding-left: 1em; padding-right: 1em; }
+    .social {
+      a { width:calc(50% - 1em);
+        &.facebook { margin-right: 2em; }
+      }
+    }
+    //a.address, a.email, a.phone, a.facebook, a.instagram { display: block; }
+    //a.email { background:$link-color; }
+    a.phone { color:#3CACE2; }
+    a.facebook { color:$facebook-color; }
+    a.instagram { color:$instagram-color; }
+  }
+}
+
+@media (min-width:$desktop-min) {
+  footer { padding:1em $base-margin;
+    a {
+      &:hover { color:$green-alt;
+        span { text-decoration: underline; }
+      }
+    }
+    .address { position: relative;
+      span { display: block; }
+      img.logo { width:2rem; height:2rem; position: absolute; top:0.65rem; max-width: none; }
+      address { margin-left: 3em; }
+    }
+    .contact { text-align: center; 
+      svg { width:2em; height:2em; }
+      span { display: block; }
+    }
+    .social { text-align: right; 
+      a { width:3.2em; height: 3.2em;
+        &.facebook { margin-right: 2rem; }
+      }
+    }
+  }
+}
+
+@media (min-width:$desktop-min) and (max-width:900px) {
+  footer {
+    .inner { @include flex-container();
+      section { @include flex-item(50%);
+        &.phone { padding-top: 1rem; }
+        &.social { text-align: center; padding-top: 1rem; }
+      }
+    }
+  }
+}

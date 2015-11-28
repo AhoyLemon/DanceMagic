@@ -1,0 +1,25 @@
+main.events {
+  h1 { margin-bottom: 0.5em; }
+}
+
+.event-listing { @include flex-container(); }
+
+.event { @include flex-split(calc(33.3333% - 2em), 100%); margin-bottom: 2em; background-color:white; padding: 1em 1em 3em 1em; position: relative; @extend %border;
+  h3 { margin-bottom: 0.5em; }
+  a { @extend %styled-hover; }
+  .cover { margin-bottom: 0.5rem; }
+  .glance { margin-bottom: 1em; }
+  time { display: block; }
+  .cost { float: right; font-size:2em; }
+  .button { width: 100%; text-align: center; position: absolute; right:0; bottom:0; left:0; }
+  
+  
+  &.special { background:$border-color; color:white;
+    h3 a { color: $light-purple; border-color:$light-purple; }
+  }
+}
+
+@include respondTo(desktop) {
+  .event-listing { margin-left: -1em; margin-right: -1em; }
+  .event { margin-left: 1em; margin-right: 1em; }
+}

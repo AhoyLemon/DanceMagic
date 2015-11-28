@@ -1,0 +1,67 @@
+$header-bg:$dark-purple;
+$header-fg:$pink;
+$mobile-nav-height:48px;
+
+header { background:$header-bg; color:$header-fg; position: relative; height:$base-margin; z-index: $z-header;
+  .hat {  position: absolute; 
+    .bg { fill:$header-fg; }
+    .fg { fill:$header-bg; transition: transform 0.3s ease; transform-origin: center; }
+  }
+  .homelink {
+    .logotype { transition: transform 0.2s ease; }
+    &:hover {
+      .logotype { transform: scale(1.1); }
+      .fg { transform: rotate(180deg); }
+    }
+  }
+  .logotype { position: absolute; 
+    * { fill:$header-fg; }
+  }
+  .title { font-size:2.5em; }
+}
+
+@media (max-width:$mobile-max) {
+  header { padding:0 1rem; height:$mobile-nav-height;
+    .hat { width:66px; height: 66px; }
+    .logotype { left:90px; height:$mobile-nav-height; max-width: calc(100% - 160px); padding-top: 6px; padding-bottom: 6px; }
+    a.flapjax { float: right; display: block; margin-top: 4px; width:40px; height:40; cursor: pointer;
+      svg * { fill:$pink; }
+      svg .open, svg .close { transition:all 0.3s ease; }
+      svg .close { transform: scale(0.3); opacity: 0; }
+      &.active {
+        svg .open { transform: scale(0.3); opacity: 0; }
+        svg .close { transform: scale(1); opacity: 1; }
+      }
+    }
+    nav.sidebar { background-color: $pink; position:fixed; top:$mobile-nav-height; right: 0; padding: 1rem; min-width: 50%; transition:transform 0.5s cubic-bezier(.65,.05,.36,1); transform:translateX(102%);
+      a { display: block; color:$dark-purple; text-decoration: none; font-size:5vw; text-transform: uppercase; }
+      &.visible { transform: translateX(0); }
+    }
+  }
+}
+
+@media (min-width:$desktop-min) {
+  header { padding:1em $base-margin;
+    .hat { height: 8rem; width: 8rem; left:$base-margin; bottom:-1rem; top:0; }
+    .logotype { width:20vw; left:($base-margin * 3); top:0; height: 64px; }
+    a.log-in { position: absolute; top:$base-margin; left:18rem; display:block; text-decoration: none; background-color:$header-bg; color:$header-fg; padding:0.3em 1em; border-bottom-left-radius: 1em; border-bottom-right-radius:1em; font-size:1.1em; cursor:pointer;
+      &:hover { background-color:lighten($header-bg,10%); /*box-shadow: inset -0.2em -0.2em 0.2em $header-bg;*/ }
+      &:active { backround-color:darken($header-bg,20%); box-shadow: inset 0.2em 0.2em 0.2em darken($purple,50%); }
+    }
+    nav { text-align: right; text-transform: uppercase; font-size:2.05vw;
+      a { color:$header-fg; text-decoration: none;
+        &:hover { font-weight: $bold; }
+      }
+    }
+  }
+}
+
+// EDGE CASES
+@media (max-width:900px) {
+  header {
+    .logotype { display: none; }
+    nav { font-size:2.35vw; line-height: 200%;
+      a { }
+    }
+  }
+}

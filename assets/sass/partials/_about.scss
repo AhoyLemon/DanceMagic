@@ -1,0 +1,32 @@
+section.instructors { @extend %clearfix; @extend %focus-box;
+  .cover { @include float-desktop(left); }
+}
+section.faq { @extend %clearfix;
+  
+  dl { @extend %focus-box; }
+  dt.question { @extend h3; color:$link-color; cursor: pointer; margin-bottom: 0.5em; margin-top: 1em;
+    &:before { content:'Q: '; font-weight: $bold; }
+    &:hover { text-decoration: underline; }
+  }
+  dd.answer { padding-left: $base-margin; position: relative; display: none;
+    &:before { content:'A:'; font-weight: $bold; position: absolute; top:0; left: 0.85em; @extend h3; }
+  }
+}
+
+.staff-listing { @include flex-container(); margin-left: -1em; margin-right: -1em; }
+.staff-member { @include flex-item(calc(500px)); margin-left: 1em; margin-right: 1em; margin-bottom: 2em; background-color:white; padding: 1em; position: relative;  @extend %border;
+  h4 { margin-bottom: 1em; }
+  .profile { float: right; margin-left: 1rem; margin-bottom: 1rem; }
+  .contact {
+    a { display: inline-block; width: 2em; height: 2em; margin-right: 0.5em;
+      .symbol { fill:white; transition:all 0.3s ease; transform-origin: center; }
+      &.facebook .box { fill:$facebook-color; }
+      &.linkedin .box { fill:$linkedin-color; }
+      &.twitter .box {fill:$twitter-color; }
+      &.pinterest .box { fill:$pinterest-color; }
+      &.email .box { fill:$link-color; }
+      
+      &:hover .symbol { transform: rotate(360deg); }
+    }
+  }
+}

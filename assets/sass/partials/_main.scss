@@ -1,0 +1,24 @@
+main.home { padding:0; position: relative; background-size:cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;
+  //.cover {  position: absolute; top:0; right:0; bottom:0; left:0; color:$white; opacity: 0.5; }
+  .button { text-align: center; 
+    span { display: block; }
+    .first { font-size:0.9em; }
+    .second { font-size:1.2em; }
+  }
+  .center-content { position: relative; z-index: $z-home-content; color:$white; top:0; right:0; bottom:0; left:0;
+    @include flex-container(row, wrap, center); background-color:rgba($black,0.8);
+    .content { }
+    summary { display: block; margin-bottom: 1em; font-weight: $light; text-align: center; text-shadow:0 0 0.2em $black; }
+  }
+}
+
+@media (max-width:$mobile-max) {
+  .center-content { padding:3rem 1rem 6rem 1rem; 
+    summary { font-size:1.5rem; }
+  }
+}
+@media (min-width:$desktop-min) {
+  .center-content { padding: $base-margin; min-height: 85vh;
+    summary { font-size:3vw; }
+  }
+}

@@ -1,0 +1,18 @@
+%clearfix {
+  &:after { content: ""; display: table;clear: both; }
+}
+
+%border { border:1px solid $border-color; }
+
+%focus-box {  background:white; border:1px solid rgba($black, 0.5);
+  @include respondTo(mobile) {
+    padding: 1rem;
+  }
+  @include respondTo(desktop) {
+    margin:($base-margin / 2) $base-margin; padding: ($base-margin / 2);
+  }
+}
+
+%styled-hover { text-decoration: none;
+  &:hover {  border-bottom:1px solid $link-color; }
+}
