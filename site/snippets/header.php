@@ -34,7 +34,7 @@
           <a href="<?php echo $site->url(); ?>/contact">contact</a>
         </nav>
       </div>
-      <a href="https://app.jackrabbitclass.com/portal/ppLogin.asp?id=505314" class="log-in desktop-only">LOG IN</a>
+      <a href="https://app.jackrabbitclass.com/portal/ppLogin.asp?id=505314" class="log-in jackrabbit desktop-only">LOG IN</a>
       <a id="FlapjaxLink" class="flapjax mobile-only">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
           <path id="FlapjaxBox" d="M91.9 8.2v83.6H8.3V8.2h83.6m5-5H3.3v93.6h93.6V3.2z" class="box"></path>

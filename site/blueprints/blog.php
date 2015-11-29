@@ -23,7 +23,7 @@ fields:
     type: time
     width: 1/2
   featured_image:
-    label: Featured Image (200x200)
+    label: Featured Image (400x400)
     type:  selector
     mode:  single
     required: false
@@ -32,9 +32,11 @@ fields:
   teaser:
     label: Article Teaser
     type: textarea
+    required: true
   text:
     label: Time to start writing!
     type: textarea
+    required: true
   tags:
     label: Tags
     type: tags

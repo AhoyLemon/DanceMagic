@@ -149,7 +149,6 @@ function PopupCenter(url, title, w, h) {
   }  
 }  
 
-
 $('a.jackrabbit').click(function() {
   var wHeight = $(window).height();
   var nwHeight = wHeight-40;

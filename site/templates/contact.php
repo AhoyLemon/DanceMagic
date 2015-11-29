@@ -4,14 +4,14 @@
     <h1><?php echo $page->title(); ?></h1>
     <section class="contact-info">
       <div class="physical-address">
-        <a href="<?php echo $page->map_link(); ?>" class="address">
-          <span><?php echo $page->address_one(); ?></span>
-          <span><?php echo $page->address_two(); ?></span>
+        <a href="<?php echo $site->google_map(); ?>" class="address">
+          <span><?php echo $site->street_address(); ?></span>
+          <span><?php echo $site->city(); ?>,<?php echo $site->state(); ?> <?php echo $site->zip(); ?></span>
         </a>
       </div>
       <div class="phone-and-email">
-        <span><a href="mailto:<?php echo $page->email(); ?>"><?php echo $page->email(); ?></a></span>
-        <span><a href="tel:<?php echo $page->tel(); ?>"><?php echo $page->tel(); ?></a></span>
+        <span><a href="mailto:<?php echo $site->email(); ?>"><?php echo $site->email(); ?></a></span>
+        <span><a href="tel:<?php echo $site->tel(); ?>"><?php echo $site->tel(); ?></a></span>
       </div>
     </section>
     <section>

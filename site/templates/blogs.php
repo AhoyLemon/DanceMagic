@@ -1,13 +1,24 @@
 <?php snippet('header') ?>
 
+<?php $ftag = urldecode (param('tag')); ?>
+
+
   <main class="blogs">
-      <h1>Blog Posts</h1>
+      <?php if ($ftag): ?>
+        <?php $blogs = $page->children()->visible()->filterBy('tags', $ftag, ','); ?>
+        <h1>Blog Posts tagged <?php echo $ftag; ?></h1>
+      <?php endif; ?>
+      <?php if (!$ftag): ?>
+        <h1>Blog Posts</h1>
+        <?php $blogs = $page->children()->visible(); ?>
+      <?php endif; ?>
       <section class="blog-listing">
-        <?php foreach ($page->children()->visible() as $blog): ?>
+        <?php foreach ($blogs as $blog): ?>
           <article class="blog-summary">
             <?php if ($blog->featured_image() != ""): ?>
+              <?php $thumb = thumb($blog->featured_image()->toFile(), array('height' => 200)); ?>
               <a href="<?php echo $blog->url(); ?>">
-                <img src="<?php echo $blog->featured_image()->toFile()->url(); ?>" class="cover">
+                <img src="<?php echo $thumb->url(); ?>" class="cover">
               </a>
             <?php endif; ?>
             <h2>
@@ -36,7 +47,7 @@
                 <?php $x = 0; ?>
                 <?php foreach($tagmatches as $tagmatch): $x = $x+1; ?>
                 <?php endforeach ?>
-                <a class="tag" <?php if ($x > 1): ?> href="<?php echo url::home() ?>/find/tag:<?php echo trim($etag) ?>" <?php endif ?>><?php echo trim($etag) ?></a>
+                <a class="tag" <?php if ($x > 1): ?> href="<?php echo $page->url() ?>/tag:<?php echo trim($etag) ?>" <?php endif ?>><?php echo trim($etag) ?></a>
               <?php endforeach ?>
             <?php endif ?>
           </article>

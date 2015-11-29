@@ -10,26 +10,6 @@ fields:
     label: Write a bit about the location (for SEO)
     type:  textarea
     buttons: false
-  address_one:
-    label: Street Address
-    type: text
-    width: 1/2
-  address_two:
-    label: City, ST ZIP
-    type: text
-    width: 1/2
-  email:
-    label: Email Address
-    type: email
-    width: 1/2
-  tel:
-    label: Phone Number
-    type: tel
-    width: 1/2
-  map_link:
-    label: Map (link)
-    type: url
-    default: https://www.google.com/maps/place/Dance-N-Magic/@44.9467784,-93.1409836,17z/data=!3m1!4b1!4m2!3m1!1s0x87f62a62bdd18bd7:0xc62729d3168661f6
   map_frame:
     label: Map (iFrame)
     type: text

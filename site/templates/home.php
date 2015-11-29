@@ -29,30 +29,13 @@
         "addressRegion": "<?php echo $site->state(); ?>",
         "postalCode": "<?php echo $site->zip(); ?>"
       },
-      "logo": "http://thefpl.us/schemaLogo.png",
+      "logo": "<?php echo $site->schema_image()->toFile()->url(); ?>",
       "sameAs" : [ 
         "<?php echo $site->facebook(); ?>",
         "<?php echo $site->instagram(); ?>",
-        "https://www.google.com/maps/place/Dance-N-Magic"
+        "<?php echo $site->google_map(); ?>"
       ]
     }
   </script>
 
 <?php snippet('footer') ?>
-
-<?php 
-        $array_testamonials = $site->find('generic-testamonials')->testamonials()->yaml();
-        $array_key = array_rand($array_testamonials);
-        $testamonial = kirbytext($array_testamonials[$array_key]['text']);
-        $cite = $array_testamonials[$array_key]['cite'];
-      ?>
-      <div class="testamonial">
-        <blockquote itemprop="description">
-          <?php echo $testamonial; ?>
-        </blockquote>
-        <?php if ($cite != ""): ?>
-          <cite itemprop="author">
-            <?php echo $cite;  ?>
-          </cite>
-        <?php endif; ?>
-      </div>

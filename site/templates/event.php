@@ -6,7 +6,7 @@
     $itemType = "";
   } ?>
 
-  <main class="eventpage" itemscope itemtype="<?php echo $itemType; ?>">
+  <main class="classpage" itemscope itemtype="<?php echo $itemType; ?>">
     <?php if ($page->featured_image() != ""): ?>
       <img src="<?php echo $page->featured_image()->toFile()->url(); ?>" class="cover" itemprop="image">
     <?php endif; ?>
