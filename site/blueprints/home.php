@@ -1,7 +1,10 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Home
-pages: true
+pages:
+  template:
+    - class
+    - free-class
 fields:
   title:
     label: Title

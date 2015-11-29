@@ -18,15 +18,13 @@ section.faq { @extend %clearfix;
   h4 { margin-bottom: 1em; }
   .profile { float: right; margin-left: 1rem; margin-bottom: 1rem; }
   .contact {
-    a { display: inline-block; width: 2em; height: 2em; margin-right: 0.5em;
-      .symbol { fill:white; transition:all 0.3s ease; transform-origin: center; }
-      &.facebook .box { fill:$facebook-color; }
-      &.linkedin .box { fill:$linkedin-color; }
-      &.twitter .box {fill:$twitter-color; }
-      &.pinterest .box { fill:$pinterest-color; }
-      &.email .box { fill:$link-color; }
-      
-      &:hover .symbol { transform: rotate(360deg); }
+    a { display: inline-block; width: 2em; height: 2em; margin-right: 0.5em; transform-origin: center; transition:all 0.15s ease;
+      &.facebook * { fill:$color-facebook; }
+      &.linkedin * { fill:$color-linkedin; }
+      &.twitter * {fill:$color-twitter; }
+      &.pinterest * { fill:$color-pinterest; }
+      &.email * { fill:$link-color; }
+      &:hover { transform: scale(1.2); }
     }
   }
 }

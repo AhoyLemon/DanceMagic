@@ -12,6 +12,46 @@ main.home { padding:0; position: relative; background-size:cover; background-pos
   }
 }
 
+.social-container { @extend %clearfix;
+  .share-label { line-height: 300%; display:block; float: left; padding-right: 0.5em; }
+  .social-buttons { display: inline-block; }
+  a.social { display: inline-block; width:3em; height: 3em; position: relative; margin-right: 1.5em;
+    svg { transform-origin: center; transition: all 0.15s ease; }
+    &.facebook { 
+      svg * { fill:$color-facebook; }
+      .label { background:$color-facebook; }
+    }
+    &.twitter {
+      svg * { fill:$color-twitter; }
+      .label { background:$color-twitter; }
+    }
+    &.pinterest {
+      svg * { fill:$color-pinterest; }
+      .label { background:$color-pinterest; }
+    }
+    &.googleplus {
+      svg * { fill:$color-googleplus; }
+      .label { background:$color-googleplus; }
+    }
+    &.linkedin { 
+      svg * { fill:$color-linkedin; }
+      .label { background:$color-linkedin; }
+    }
+    &.email { 
+      svg * { fill:$link-color; }
+      .label { background:$link-color; }
+    }
+    
+    .label { position: absolute; top:0.8em; white-space: nowrap; padding: 0.5em; transition:all 0.15s cubic-bezier(.65,.05,.36,1); opacity:0; color:$white; pointer-events: none;
+      left: 3.4rem; transform:translateX(-100%); z-index: 3; font-size: 0.8em;
+    }
+    &:hover { 
+      svg { transform: scale(1.2); }
+      .label { transform:translateX(0); opacity: 1; }
+    }
+  }
+}
+
 @media (max-width:$mobile-max) {
   .center-content { padding:3rem 1rem 6rem 1rem; 
     summary { font-size:1.5rem; }

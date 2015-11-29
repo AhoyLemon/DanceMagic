@@ -9,12 +9,14 @@ fields:
   staff:
     label: Staff Profile
     type: structure
+    modalsize: large
     entry: >
       {{title}}
     fields:
       title:
         label: Name
         type: text
+        required: true
       jobtitle:
         label: Job Title
         type: text
@@ -27,8 +29,20 @@ fields:
       text:
         label: Profile Text
         type: markdown
+        tools:
+          - bold
+          - italic
+          - orderedList
+          - unorderedList
+          - link
+          - image
+          - line
       facebook:
         label: Facebook Page
+        type: url
+        width: 1/2
+      pinterest:
+        label: Pinterest Page
         type: url
         width: 1/2
       twitter:
@@ -39,10 +53,11 @@ fields:
         label: LinkedIn Page
         type: url
         width: 1/2
-      pinterest:
-        label: Pinterest Page
+      googleplus:
+        label: Google+ Page
         type: url
         width: 1/2
       email:
         label: Email Address
         type: email
+        width: 1/2

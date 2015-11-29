@@ -4,7 +4,7 @@
     <?php snippet('head') ?>
   </head>
   <body>
-
+    <?php snippet('svg') ?>
     <header>
       <a href="<?php echo $site->url(); ?>" class="homelink">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="hat">

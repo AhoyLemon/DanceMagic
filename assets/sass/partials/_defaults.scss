@@ -42,10 +42,13 @@ button, .button { display: inline-block; background-color:$link-color; color:$wh
 .tags {
   .label { padding-right: 0.5em; }
 }
-a.tag { display: inline-block; background:$link-color; color:$white; padding:0.25em 0.5em; margin-right: 0.5em; margin-bottom: 0.5em; border-radius: 4px; cursor: pointer; text-transform: lowercase;
+a.tag { display: inline-block; padding:0.25em 0.5em; margin-right: 0.5em; margin-bottom: 0.5em; border-radius: 4px; text-transform: lowercase;
+  &:not([href]) { border:1px solid $link-color; }
+  &[href] { background:$link-color; color:$white; cursor: pointer; text-decoration: none;
+    &:hover { background-color:lighten($link-color,10%); }
+    &:active { background-color:darken($link-color,3.5%); }
+  }
   &:before { content: '\2022'; padding-right: 0.25em; }
-  &:hover { background-color:lighten($link-color,10%); }
-  &:active { background-color:darken($link-color,3.5%); }
 }
 
 @media (max-width:$mobile-max) {

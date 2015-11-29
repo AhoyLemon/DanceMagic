@@ -10,8 +10,8 @@ footer { background-color:$dark-purple; color:$pink;
   .social { 
     a { display: inline-block;
       &:hover {
-        &.facebook { color:$facebook-color; }
-        &.instagram { color:$instagram-color; }
+        &.facebook { color:$color-facebook; }
+        &.instagram { color:$color-instagram; }
       }
     }
   }
@@ -33,8 +33,8 @@ footer { background-color:$dark-purple; color:$pink;
     //a.address, a.email, a.phone, a.facebook, a.instagram { display: block; }
     //a.email { background:$link-color; }
     a.phone { color:#3CACE2; }
-    a.facebook { color:$facebook-color; }
-    a.instagram { color:$instagram-color; }
+    a.facebook { color:$color-facebook; }
+    a.instagram { color:$color-instagram; }
   }
 }
 
