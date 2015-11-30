@@ -1,7 +1,7 @@
 <?php if(!defined('KIRBY')) exit ?>
 
 title: Free Class
-pages: false
+pages: default
 fields:
   title:
     label: Title

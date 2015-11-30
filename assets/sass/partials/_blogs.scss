@@ -8,7 +8,7 @@
 
 
 .blog-signup { border-top:1px solid $black;
-  .form-holder { @extend %focus-box; }
+  .form-holder { @extend %focus-box; margin-left: auto; margin-right: auto; max-width: 36em; }
   form { max-width: 320px; @include flex-container(); margin-left: auto; margin-right: auto;
     .full-width { @include flex-item(100%); }
     .half-width { @include flex-item(50%); }

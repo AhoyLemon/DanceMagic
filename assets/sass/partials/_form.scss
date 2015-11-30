@@ -1,0 +1,13 @@
+.form-holder { max-width:28rem; @extend %focus-box; margin-left: auto; margin-right: auto; }
+form.form { @include flex-container();
+  h3 { text-align: center; padding: 0.25em; margin: 0; }
+  .form-group { padding-top: 1em; }
+  .full { @include flex-item(100%); }
+  .half { @include flex-item(50%); }
+  .third { @include flex-item(33.3333%); }
+  .state { max-width: 3em; }
+  .zip { max-width: 6em; }
+  label { display: block; font-size:0.85em; width: 100%; }
+  input { display: block; width: 100%; font-size:1.2em; font-family: $font; line-height: 150%; padding-left: 0.5em; padding-right: 0.5em; }
+  button { display: block; width: 100%; text-align: center; }
+}
