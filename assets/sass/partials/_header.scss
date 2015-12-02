@@ -33,8 +33,8 @@ header { background:$header-bg; color:$header-fg; position: relative; height:$ba
         svg .close { transform: scale(1); opacity: 1; }
       }
     }
-    nav.sidebar { background-color: $pink; position:fixed; top:$mobile-nav-height; right: 0; padding: 1rem; min-width: 50%; transition:transform 0.5s cubic-bezier(.65,.05,.36,1); transform:translateX(102%);
-      a { display: block; color:$dark-purple; text-decoration: none; font-size:5vw; text-transform: uppercase; }
+    nav.sidebar { background-color: $header-bg; position:fixed; top:$mobile-nav-height; right: 0; padding:2rem 3rem 1rem 3rem; min-width: 50%; transition:transform 0.5s cubic-bezier(.17,.84,.44,1); transform:translateX(102%);
+      a { display: block; color:$pink; text-decoration: none; font-size:2rem; text-transform: uppercase; margin-bottom: 2rem; }
       &.visible { transform: translateX(0); }
     }
   }

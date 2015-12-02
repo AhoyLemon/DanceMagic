@@ -15,7 +15,9 @@ main.home { padding:0; position: relative; background-size:cover; background-pos
 .social-container { @extend %clearfix;
   .share-label { line-height: 300%; display:block; float: left; padding-right: 0.5em; }
   .social-buttons { display: inline-block; }
-  a.social { display: inline-block; width:3em; height: 3em; position: relative; margin-right: 1.5em;
+  a.social { display: inline-block; position: relative;
+    @include respondTo(mobile) { width:32px; width:32px; margin-right:10px; }
+    @include respondTo(desktop) { width:3em; height: 3em; margin-right: 1.5em; }
     svg { transform-origin: center; transition: all 0.15s ease; }
     &.facebook { 
       svg * { fill:$color-facebook; }

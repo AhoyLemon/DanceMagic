@@ -18,7 +18,7 @@ footer { background-color:$dark-purple; color:$pink;
 }
 
 @media (max-width:$mobile-max) {
-  footer { padding:2em 1em 4em 1em;
+  footer { padding:1em;
     address { display: none; }
     .contact {
       span { display: none; }
@@ -27,7 +27,7 @@ footer { background-color:$dark-purple; color:$pink;
     section.social { @include flex-item(40%); padding-left: 1em; padding-right: 1em; }
     .social {
       a { width:calc(50% - 1em);
-        &.facebook { margin-right: 2em; }
+        &.facebook { margin-right: 1.5em; }
       }
     }
     //a.address, a.email, a.phone, a.facebook, a.instagram { display: block; }

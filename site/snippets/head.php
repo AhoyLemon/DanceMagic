@@ -8,7 +8,7 @@
   <meta name="description" content="<?php echo $site->description()->html(); ?>">
 <?php } ?>
 <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,700" rel="stylesheet">
-<link href="http://dancenmagic.net/assets/css/dance.css" rel="stylesheet" />
+<?php echo css('assets/css/dance.css') ?>
 
 
 <!-- Favicon stack -->
