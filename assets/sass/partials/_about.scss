@@ -16,7 +16,10 @@ section.faq { @extend %clearfix;
 .staff-listing { @include flex-container(); margin-left: -1em; margin-right: -1em; }
 .staff-member { @include flex-item(calc(500px)); margin-left: 1em; margin-right: 1em; margin-bottom: 2em; background-color:white; padding: 1em; position: relative;  @extend %border;
   h4 { margin-bottom: 1em; }
-  .profile { float: right; margin-left: 1rem; margin-bottom: 1rem; }
+  .profile {
+    @include respondTo(desktop) { float: right; margin-left: 1rem; margin-bottom: 1rem; }
+    @include respondTo(mobile) { display: block; margin-left: auto; margin-right: auto; margin-bottom: 1rem; }
+  }
   .contact {
     a { display: inline-block; width: 2em; height: 2em; margin-right: 0.5em; transform-origin: center; transition:all 0.15s ease;
       &.facebook * { fill:$color-facebook; }

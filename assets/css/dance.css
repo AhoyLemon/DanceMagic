@@ -1223,7 +1223,7 @@ main.home .center-content summary {
   margin-right: 1em;
   margin-bottom: 2em;
   background-color: white;
-  padding: 1em;
+  padding: 1em 1em 3em 1em;
   position: relative;
 }
 
@@ -1236,11 +1236,6 @@ main.home .center-content summary {
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.1;
-}
-
-.class .inner {
-  position: relative;
-  z-index: 3;
 }
 
 .class h3, .class section.faq dt.question, section.faq .class dt.question, .class section.faq dd.answer:before, section.faq .class dd.answer:before {
@@ -1413,6 +1408,18 @@ main.home .center-content summary {
 
 .class .costper:before {
   content: "/";
+}
+
+.class .cost {
+  text-align: center;
+}
+
+.class .button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
 }
 
 .class.inactive {
@@ -1885,10 +1892,21 @@ section.faq dd.answer:before {
   margin-bottom: 1em;
 }
 
-.staff-member .profile {
-  float: right;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
+@media (min-width: 601px) {
+  .staff-member .profile {
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .staff-member .profile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+  }
 }
 
 .staff-member .contact a {

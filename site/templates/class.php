@@ -33,6 +33,8 @@
           $level = "Beginner/Intermediate (0-5 yrs)";
         } else if ($page->explevel() == "intermediate_advanced") {
           $level = "Intermediate/Advanced (4-10 yrs)";
+        } else {
+          $level = $page->explevel();
         } ?>
         <div class="explevel">
           <span class="label">Level:</span>
@@ -92,23 +94,20 @@
       </div>
     </div>
     <div class="testamonial" itemprop="review" itemscope itemtype="http://schema.org/Review">
-    <?php if ($page->testamonial() != "") { ?>
-      <div class="testamonial" itemprop="review" itemscope itemtype="http://schema.org/Review">
+      <?php if ($page->testamonial() != "") { ?>
         <blockquote itemprop="description">
           <?php echo $page->testamonial()->kirbytext(); ?>
         </blockquote>
         <?php if ($page->citation() != ""): ?>
           <cite itemprop="author"><?php echo $page->citation(); ?></cite>
         <?php endif; ?>
-      </div>
-    <?php } else { ?>
-      <?php 
-        $array_testamonials = $site->find('generic-testamonials')->testamonials()->yaml();
-        $array_key = array_rand($array_testamonials);
-        $testamonial = kirbytext($array_testamonials[$array_key]['text']);
-        $cite = $array_testamonials[$array_key]['cite'];
-      ?>
-      <div class="testamonial">
+      <?php } else { ?>
+        <?php 
+          $array_testamonials = $site->find('generic-testamonials')->testamonials()->yaml();
+          $array_key = array_rand($array_testamonials);
+          $testamonial = kirbytext($array_testamonials[$array_key]['text']);
+          $cite = $array_testamonials[$array_key]['cite'];
+        ?>
         <blockquote itemprop="description">
           <?php echo $testamonial; ?>
         </blockquote>
@@ -117,8 +116,8 @@
             <?php echo $cite;  ?>
           </cite>
         <?php endif; ?>
-      </div>
-    <?php } ?>
+      <?php } ?>
+    </div>
     
     
     <!-- SHARE THIS PAGE ON THE SOCIAL MEDIA OF YOUR CHOICE -->

@@ -41,16 +41,16 @@ fields:
         label: Facebook Page
         type: url
         width: 1/2
-      pinterest:
-        label: Pinterest Page
-        type: url
-        width: 1/2
       twitter:
         label: Twitter Page
         type: url
         width: 1/2
       linkedin:
         label: LinkedIn Page
+        type: url
+        width: 1/2
+      pinterest:
+        label: Pinterest Page
         type: url
         width: 1/2
       googleplus:

@@ -6,7 +6,7 @@
       <div class="content">
         <summary><?php echo $page->text()->kirbytext(); ?></summary>
         <div class="button-holder">
-          <a href="classes.html" class="button">
+          <a href="classes" class="button">
             <span class="first"><?php echo $page->cta_a(); ?></span>
             <span class="second"><?php echo $page->cta_b(); ?></span>
           </a>

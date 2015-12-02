@@ -64,7 +64,7 @@
         <article
           <?php if ($class->minage() != ""): ?>min-age="<?php echo $class->minage(); ?>"<?php endif; ?>
           <?php if ($class->maxage() != ""): ?>max-age="<?php echo $class->maxage(); ?>"<?php endif; ?>
-          <?php if ($class->explevel() != "" && $class->explevel != "any"): ?>explevel="<?php echo $class->explevel(); ?>"<?php endif; ?>
+          <?php if ($class->explevel() != "" || $class->explevel() != "any"): ?>explevel="<?php echo $class->explevel(); ?>"<?php endif; ?>
           <?php if ($class->session() != ""): ?>session="<?php echo $class->session(); ?>"<?php endif; ?>
           <?php if ($class->classtype() != ""): ?>classtype="<?php echo $class->classtype(); ?>"<?php endif; ?>
         class="class">
@@ -134,17 +134,16 @@
                 </div>
               <?php endif; ?>
             </div>
-            <div class="price-and-button">
-              <div class="tuition">
-                <?php if ($class->price() != ""): ?>
-                  <span class="price">$<?php echo $class->price(); ?></span>
-                <?php endif; ?>
+            <?php if ($class->price() != ""): ?>
+              <div class="cost">
+                <span class="price">$<?php echo $class->price(); ?></span>
                 <?php if ($class->priceper() != ""): ?>
                   <span class="costper"><?php echo $class->priceper(); ?></span>
                 <?php endif; ?>
               </div>
-              <div class="signup"><a href="<?php echo $class->url(); ?>" class="button">Learn More</a></div>
-            </div>
+            <?php endif; ?>
+            
+            <a href="<?php echo $class->url(); ?>" class="button">Learn More</a>
           </div>
         </article>
       <?php endforeach; ?>
