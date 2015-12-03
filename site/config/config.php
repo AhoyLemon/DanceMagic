@@ -20,6 +20,12 @@ c::set('debug', true);
 c::set('cache', false);
 c::set('markdown.extra', true);
 
+c::set('sitemap.exclude', array(
+  'error',
+  'free-class/success',
+  'generic-testamonials'
+));
+
 /*
 
 ---------------------------------------
