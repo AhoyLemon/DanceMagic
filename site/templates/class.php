@@ -24,15 +24,15 @@
       <?php endif; ?>
       <?php if ($page->explevel() != ""): ?>
         <?php if ($page->explevel() == "beginner") {
-          $level = "Beginner (0-2 yrs)";
+          $level = '<span data-tooltip="less than 2 years experience">Beginner</span>';
         } else if ($page->explevel() == "intermediate") {
-          $level = "Intermediate (2-5 yrs)";
+          $level = '<span data-tooltip="2-5 years of experience">Intermediate</span>';
         } else if ($page->explevel() == "advanced") {
-          $level = "Advanced (4-10 yrs)";
+          $level = '<span data-tooltip="more than 4 years of experience">Advanced</span>';
         } else if ($page->explevel() == "beginner_intermediate") {
-          $level = "Beginner/Intermediate (0-5 yrs)";
+          $level = '<span data-tooltip="up to 5 years of experience">Beginner+</span>';
         } else if ($page->explevel() == "intermediate_advanced") {
-          $level = "Intermediate/Advanced (4-10 yrs)";
+          $level = '<span data-tooltip="4-9 years of experience">Intermediate+</span>';
         } else {
           $level = $page->explevel();
         } ?>

@@ -89,17 +89,19 @@
                 </div>
               <?php endif; ?>
               <?php if ($class->explevel() != ""): ?>
-                <?php if ($class->explevel() == "beginner") {
-                  $level = "Beginner (0-2 yrs)";
-                } else if ($class->explevel() == "intermediate") {
-                  $level = "Intermediate (2-5 yrs)";
-                } else if ($class->explevel() == "advanced") {
-                  $level = "Advanced (4-10 yrs)";
-                } else if ($class->explevel() == "beginner_intermediate") {
-                  $level = "Beginner/Intermediate (0-5 yrs)";
-                } else if ($class->explevel() == "intermediate_advanced") {
-                  $level = "Intermediate/Advanced (4-10 yrs)";
-                } ?>
+                 <?php if ($class->explevel() == "beginner") {
+                    $level = '<span data-tooltip="less than 2 years experience">Beginner</span>';
+                  } else if ($class->explevel() == "intermediate") {
+                    $level = '<span data-tooltip="2-5 years of experience">Intermediate</span>';
+                  } else if ($class->explevel() == "advanced") {
+                    $level = '<span data-tooltip="more than 4 years of experience">Advanced</span>';
+                  } else if ($class->explevel() == "beginner_intermediate") {
+                    $level = '<span data-tooltip="up to 5 years of experience">Beginner+</span>';
+                  } else if ($class->explevel() == "intermediate_advanced") {
+                    $level = '<span data-tooltip="4-9 years of experience">Intermediate+</span>';
+                  } else {
+                    $level = $class->explevel();
+                  } ?>
                 <div class="explevel">
                   <span class="label">Level:</span>
                   <span class="value"><?php echo $level; ?></span>
