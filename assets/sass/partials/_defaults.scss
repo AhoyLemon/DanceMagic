@@ -37,6 +37,11 @@ button, .button { display: inline-block; background-color:$link-color; color:$wh
     &:hover { background-color:lighten($light-purple,10%); }
     &:active { background-color:lighten($light-purple,3.5%);  }
   }
+  
+  &[disabled] { background-color:lighten($black, 30%); cursor: default;
+    &:hover { background-color:lighten($black, 30%); box-shadow: none; }
+    &:active { background-color:lighten($black, 30%); box-shadow: none; }
+  }
 }
 // TAGGING SYSTEM
 .tags {

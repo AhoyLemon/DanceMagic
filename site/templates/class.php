@@ -79,9 +79,19 @@
           <span class="costper"><?php echo $page->priceper(); ?></span>
         <?php endif; ?>
       </div>
-      <div class="signup">
-        <a itemprop="url" href="<?php echo $page->register_link(); ?>" class="button jackrabbit">Register Now</a>
-      </div>
+      <?php if ($page->register_link() != ""): ?>
+        <div class="signup">
+          <?php if ($page->registration_status() == "open") { ?>
+            <a itemprop="url" href="<?php echo $page->register_link(); ?>" class="button jackrabbit">Register Now</a>
+          <?php } else if ($page->registration_status() == "pending") { ?>
+            <a itemprop="url" disabled class="button">Registration Pending</a>
+          <?php } else if ($page->registration_status() == "sold-out") { ?>
+            <a itemprop="url" disabled class="button">Sold Out</a>
+          <?php } else if ($page->registration_status() == "closed") { ?>
+            <a itemprop="url" disabled class="button">Registration Closed</a>
+          <?php } ?>
+        </div>
+      <?php endif; ?>
     </div>
     <div itemprop="location" itemscope itemtype="http://schema.org/Place">
       <meta itemprop="name" content="<?php echo $site->title(); ?>" />

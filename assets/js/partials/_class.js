@@ -149,6 +149,7 @@ function PopupCenter(url, title, w, h) {
   }  
 }  
 
+/*
 $('a.jackrabbit').click(function() {
   var wHeight = $(window).height();
   var nwHeight = wHeight-40;
@@ -156,3 +157,4 @@ $('a.jackrabbit').click(function() {
   PopupCenter(nURL,'register','900',nwHeight);
   return false;
 });
+**/

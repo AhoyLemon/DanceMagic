@@ -117,3 +117,14 @@ fields:
   register_link:
     label: Register Link
     type: url
+    width: 2/3
+  registration_status:
+    label: Registration Status
+    type: select
+    default: open
+    options:
+      pending: Pending
+      open: Open
+      sold-out: Sold Out
+      closed: Closed
+    width: 1/3

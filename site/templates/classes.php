@@ -142,9 +142,8 @@
                 <?php endif; ?>
               </div>
             <?php endif; ?>
-            
-            <a href="<?php echo $class->url(); ?>" class="button">Learn More</a>
           </div>
+          <a href="<?php echo $class->url(); ?>" class="button">Learn More</a>
         </article>
       <?php endforeach; ?>
     
