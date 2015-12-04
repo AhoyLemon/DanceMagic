@@ -30,9 +30,9 @@
         } else if ($page->explevel() == "advanced") {
           $level = '<span data-tooltip="more than 4 years of experience">Advanced</span>';
         } else if ($page->explevel() == "beginner_intermediate") {
-          $level = '<span data-tooltip="up to 5 years of experience">Beginner+</span>';
+          $level = '<span data-tooltip="up to 5 years of experience">Beg/Int</span>';
         } else if ($page->explevel() == "intermediate_advanced") {
-          $level = '<span data-tooltip="4-9 years of experience">Intermediate+</span>';
+          $level = '<span data-tooltip="4-9 years of experience">Int/Adv</span>';
         } else {
           $level = $page->explevel();
         } ?>

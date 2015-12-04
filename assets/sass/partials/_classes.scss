@@ -53,7 +53,7 @@
   .audience { @include flex-container(); margin-bottom: 1em;
     > * { @include flex-split(33.3333%, 50%); }
   }
-  .under-summary { @include flex-container(); margin-bottom: 2em; clear: both; 
+  .under-summary { @include flex-container(); margin-bottom: 2em;
     > * { @include flex-split(25%, 50%); }
   }
   .day { text-transform: capitalize; }
