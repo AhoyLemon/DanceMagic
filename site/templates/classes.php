@@ -55,7 +55,7 @@
             <?php echo $class->desc()->kirbytext(); ?>
           </summary>
           <div class="button-holder">
-            <a href="<?php echo $class->url(); ?>" class="button">SIGN UP</a>
+            <a href="<?php echo $class->url(); ?>" class="button">Learn More</a>
           </div>
         </article>
       <?php endif; ?>

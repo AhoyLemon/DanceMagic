@@ -13,7 +13,8 @@
     a { @extend %styled-hover; }
   }
   .cover { @include float-desktop(left); }
-  .button-holder { text-align: right; }
+  .button-holder { text-align: center; }
+  .button { padding-left:3em; padding-right: 3em; }
 }
 
 .class { @include flex-item(calc(320px)); margin-left: 1em; margin-right: 1em; margin-bottom: 2em; background-color:white; padding: 1em 1em 3em 1em; position: relative; @extend %border;
