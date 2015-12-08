@@ -23,7 +23,7 @@
   h3 { margin-bottom: 0.5em;
     a { @extend %styled-hover; }
   }
-  .audience { @include flex-container(); margin-bottom: 0.5em; 
+  .audience { @include flex-container(); margin-bottom: 0.5em;
     .age-range, .classtype, .gender { @include flex-item(50%); padding-bottom: 0.5em; }
     .explevel { @include flex-item(100%); padding-bottom: 0.5em; }
     .value { font-weight: $bold; text-transform: capitalize; }
@@ -51,16 +51,16 @@
 
 .classpage { 
   .cover { @include float-desktop(right); }
-  .audience { @include flex-container(); margin-bottom: 1em;
+  .audience { @include flex-container(); margin-bottom: 1em; font-size:1.3em;
     > * { @include flex-split(33.3333%, 50%); }
   }
-  .under-summary { @include flex-container(); margin-bottom: 2em;
+  .under-summary { @include flex-container(); margin-bottom: 0.5em; font-size:1.3em;
     > * { @include flex-split(25%, 50%); }
   }
   .day { text-transform: capitalize; }
   .value { font-weight: $bold; text-transform: capitalize; }
   .register-holder { text-align: center; }
-  .price-and-button { @include flex-container();
+  .price-and-button { @include flex-container(); margin-bottom: 0.5em;
     .tuition, .signup { @include flex-item(50%); text-align: center; }
   }
   .price { font-size:1.8em; line-height: 125%; }
