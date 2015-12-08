@@ -31,6 +31,18 @@
 <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 <meta name="theme-color" content="#380f47">
 
+<!-- Twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@<?php echo $site->twitter_username(); ?>" />
+<meta name="twitter:title" content="<?php echo $page->title(); ?>" />
+<meta name="twitter:description" content="<?php echo excerpt($page->text()->xml(), 180) ?>" />
+<?php if($image = $page->featured_image() != "") { ?>
+  <meta name="twitter:image" content="<?php echo $page->featured_image()->toFile()->url(); ?>" />
+<?php } else { ?>
+  <meta name="og:image" content="<?php echo $site->social_media_image()->toFile()->url(); ?>" />
+<?php } ?>
+<meta name="twitter:url" content="<?php echo $page->url() ;?>" />
+
 <!-- OpenGraph Details -->
 <meta property="og:title" content="<?php echo $page->title()->xml(); ?>">
 <meta property="og:type" content="school">

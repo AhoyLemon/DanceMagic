@@ -45,9 +45,11 @@
     <meta itemprop="description" content="<?php echo $page->desc()->xml(); ?>" />
     <?php echo $page->text()->kirbytext(); ?>
     <div class="under-summary">
-      <?php if ($page->weekday() != ""): ?>
+      <?php if ($page->weekday_list() != "") { ?>
+        <div class="days"><span class="day"><?php echo $page->weekday_list(); ?></span></div>  
+      <?php } else if ($page->weekday() != "") { ?>
         <div class="days"><span class="day"><?php echo $page->weekday(); ?></span></div>
-      <?php endif; ?>
+      <?php } ?>
       <?php if ($page->datestarts() != "" && $page->dateends() != ""): ?>
         <div class="duration">
           <span class="start" itemprop="startDate" content="<?php echo $page->datestarts(); ?>"><?php echo date("M jS", strtotime($page->datestarts())); ?></span>
@@ -70,15 +72,15 @@
       <?php endif; ?>
     </div>
     <div class="price-and-button" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-      <div class="tuition">
-        <?php if ($page->price() != ""): ?>
+      <?php if ($page->price() != ""): ?>
+        <div class="tuition">
           <meta itemprop="priceCurrency" content="USD" />
           <span class="price" itemprop="price" content="<?php echo $page->price(); ?>">$<?php echo $page->price(); ?></span>
-        <?php endif; ?>
-        <?php if ($page->priceper() != ""): ?>
-          <span class="costper"><?php echo $page->priceper(); ?></span>
-        <?php endif; ?>
-      </div>
+          <?php if ($page->priceper() != ""): ?>
+            <span class="costper"><?php echo $page->priceper(); ?></span>
+          <?php endif; ?>
+        </div>
+      <?php endif; ?>
       <?php if ($page->register_link() != ""): ?>
         <div class="signup">
           <?php if ($page->registration_status() == "open") { ?>
@@ -93,6 +95,13 @@
         </div>
       <?php endif; ?>
     </div>
+    
+    <?php if ($page->additional_details() != ""): ?>
+      <div class="additional-details">
+        <?php echo $page->additional_details()->kirbytext(); ?>
+      </div>
+    <?php endif; ?>
+    
     <div itemprop="location" itemscope itemtype="http://schema.org/Place">
       <meta itemprop="name" content="<?php echo $site->title(); ?>" />
       <meta itemprop="url" content="<?php echo $site->url(); ?>" />
@@ -129,6 +138,58 @@
       <?php } ?>
     </div>
     
+    
+    <!-- SUBLISTINGS -->
+    
+    <?php if ($page->sublisting_toggle() == "true"): ?>
+    
+      <?php foreach ($page->sublistings()->toStructure() as $sublisting): ?>
+        <div class="sublisting">
+          <?php if ($sublisting->weekday() != ""): ?>
+            <div class="weekday">
+              <?php echo $sublisting->weekday(); ?>
+            </div>
+          <?php endif; ?>
+          <?php if ($sublisting->datestarts() != "" && $sublisting->dateends() != ""): ?>
+            <div class="duration">
+              <span class="start" itemprop="startDate"><?php echo date("M jS", strtotime($sublisting->datestarts())); ?></span>
+              -
+              <span class="end" itemprop="endDate"><?php echo date("M jS", strtotime($sublisting->dateends())); ?></span>
+            </div>
+          <?php endif; ?>
+          <?php if ($sublisting->timestarts() != "" && $sublisting->timeends() != ""): ?>
+            <div class="times">
+              <span class="time start"><?php echo date("g:ia", strtotime($sublisting->timestarts())); ?></span>
+              -
+              <span class="time end"><?php echo date("g:ia", strtotime($sublisting->timeends())); ?></span>
+            </div>
+          <?php endif; ?>
+          <?php if ($sublisting->price() != ""): ?>
+            <div class="tuition">
+              <meta itemprop="priceCurrency" content="USD" />
+              <span class="price" itemprop="price" content="<?php echo $sublisting->price(); ?>">$<?php echo $sublisting->price(); ?></span>
+              <?php if ($sublisting->priceper() != ""): ?>
+                <span class="costper"><?php echo $sublisting->priceper(); ?></span>
+              <?php endif; ?>
+            </div>
+          <?php endif; ?>
+          <?php if ($sublisting->register_link() != ""): ?>
+            <div class="signup">
+              <?php if ($page->registration_status() == "open") { ?>
+                <a href="<?php echo $sublisting->register_link(); ?>" class="button jackrabbit">Register Now</a>
+              <?php } else if ($page->registration_status() == "pending") { ?>
+                <a disabled class="button">Registration Pending</a>
+              <?php } else if ($page->registration_status() == "sold-out") { ?>
+                <a disabled class="button">Sold Out</a>
+              <?php } else if ($page->registration_status() == "closed") { ?>
+                <a disabled class="button">Registration Closed</a>
+              <?php } ?>
+            </div>
+          <?php endif; ?>
+        </div>
+        
+      <?php endforeach; ?>
+    <?php endif; ?>
     
     <!-- SHARE THIS PAGE ON THE SOCIAL MEDIA OF YOUR CHOICE -->
     <div class="social-container">

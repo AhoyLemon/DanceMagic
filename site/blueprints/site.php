@@ -3,6 +3,7 @@
 title: Site
 pages:
   template:
+    - default
     - home
     - classes
     - events
@@ -56,6 +57,23 @@ fields:
     type: url
     icon: instagram
     width: 1/2
+  twitter:
+    label: Twitter Page
+    type: url
+    icon: twitter
+    width: 1/4
+  twitter_handle:
+    label: Twitter Handle (no @)
+    type: text
+    placeholder: (no @)
+    icon: twitter
+    width: 1/4
+    required: true
+  pinterest:
+    label: Pinterest Page
+    type: url
+    icon: pinterest
+    width: 1/2
   googleplus:
     label: Google+ Page
     type: url
@@ -68,9 +86,10 @@ fields:
     required: true
     width: 1/2
   description:
-    label: Page Description (will be used if page does not have one)
+    label: Generic Page Description
     type:  textarea
     buttons: false
+    help: This will be used if page does not have a description.
   social_media_image:
     label: Social Media Image (square)
     type:  selector
@@ -78,10 +97,12 @@ fields:
     required: true
     types:
       - image
+    help: Backup social media image in case the page doesn't have one.
   schema_image:
-    label: Schema Image (logo)
+    label: Schema Image
     type:  selector
     mode:  single
     required: true
     types:
       - image
+    help: Make sure this is just a logo.

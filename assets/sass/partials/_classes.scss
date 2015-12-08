@@ -68,6 +68,13 @@
   .costper { font-size:0.8em;
     &:before { content:"/" }
   }
+  
+  .sublisting { @include flex-container(); margin-left: auto; margin-right: auto; margin-bottom: 1em;
+    > * {margin-left: 1em; margin-right: 1em }
+    .weekday, tuition { @include flex-item(7em);  }
+    .duration, .times { @include flex-item(9em); }
+    .signup { @include flex-item(16em); }
+  }
 }
 
 .testamonial {  padding: ($base-margin / 2);
