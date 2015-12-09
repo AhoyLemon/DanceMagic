@@ -40,6 +40,7 @@
         </section>
       </div>
     </footer>
+    <?php snippet('analytics') ?>
     <script src="https://code.jquery.com/jquery-2.1.3.min.js" type="text/javascript"></script>
     <?php echo js('assets/js/min/dance.min.js') ?>
   </body>

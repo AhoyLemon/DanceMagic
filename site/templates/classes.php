@@ -9,7 +9,7 @@
         <input id="AgePick" type="number" step="1" min="2" max="99" placeholder="all">
       </div>
       <div class="criteria level">
-        <label>level</label>
+        <label data-tooltip="beginner: <?php echo $page->beginner_desc(); ?> &#xa; intermediate: <?php echo $page->intermediate_desc(); ?> &#xa; advanced: <?php echo $page->advanced_desc(); ?>">level</label>
         <select id="SelectLevel">
           <option value="any">any</option>
           <option value="beginner">beginner</option>
@@ -90,15 +90,15 @@
               <?php endif; ?>
               <?php if ($class->explevel() != ""): ?>
                  <?php if ($class->explevel() == "beginner") {
-                    $level = '<span data-tooltip="less than 2 years experience">Beginner</span>';
+                    $level = '<span data-tooltip="'.$page->beginner_desc().'">Beginner</span>';
                   } else if ($class->explevel() == "intermediate") {
-                    $level = '<span data-tooltip="2-5 years of experience">Intermediate</span>';
+                    $level = '<span data-tooltip="'.$page->intermediate_desc().'">Intermediate</span>';
                   } else if ($class->explevel() == "advanced") {
-                    $level = '<span data-tooltip="more than 4 years of experience">Advanced</span>';
+                    $level = '<span data-tooltip="'.$page->advanced_desc().'">Advanced</span>';
                   } else if ($class->explevel() == "beginner_intermediate") {
-                    $level = '<span data-tooltip="up to 5 years of experience">Beg/Int</span>';
+                    $level = '<span data-tooltip="'.$page->beginnerintermediate_desc().'">Beg/Int</span>';
                   } else if ($class->explevel() == "intermediate_advanced") {
-                    $level = '<span data-tooltip="4-9 years of experience">Int/Adv</span>';
+                    $level = '<span data-tooltip="'.$page->intermediateadvanced_desc().'">Int/Adv</span>';
                   } else {
                     $level = $class->explevel();
                   } ?>

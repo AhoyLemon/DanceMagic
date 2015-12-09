@@ -23,16 +23,17 @@
         </div>
       <?php endif; ?>
       <?php if ($page->explevel() != ""): ?>
+        <?php $classes = $page->parent(); ?>
         <?php if ($page->explevel() == "beginner") {
-          $level = '<span data-tooltip="less than 2 years experience">Beginner</span>';
+          $level = '<span data-tooltip="'.$page->parent()->beginner_desc().'">Beginner</span>';
         } else if ($page->explevel() == "intermediate") {
-          $level = '<span data-tooltip="2-5 years of experience">Intermediate</span>';
+          $level = '<span data-tooltip="'.$page->parent()->intermediate_desc().'">Intermediate</span>';
         } else if ($page->explevel() == "advanced") {
-          $level = '<span data-tooltip="more than 4 years of experience">Advanced</span>';
+          $level = '<span data-tooltip="'.$page->parent()->advanced_desc().'">Advanced</span>';
         } else if ($page->explevel() == "beginner_intermediate") {
-          $level = '<span data-tooltip="up to 5 years of experience">Beg/Int</span>';
+          $level = '<span data-tooltip="'.$page->parent()->beginnerintermediate_desc().'">Beg/Int</span>';
         } else if ($page->explevel() == "intermediate_advanced") {
-          $level = '<span data-tooltip="4-9 years of experience">Int/Adv</span>';
+          $level = '<span data-tooltip="'.$page->parent()->intermediateadvanced_desc().'">Int/Adv</span>';
         } else {
           $level = $page->explevel();
         } ?>
@@ -137,7 +138,6 @@
         <?php endif; ?>
       <?php } ?>
     </div>
-    
     
     <!-- SUBLISTINGS -->
     
