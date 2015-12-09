@@ -8,7 +8,7 @@ main.home { padding:0; position: relative; background-size:cover; background-pos
   .center-content { position: relative; z-index: $z-home-content; color:$white; top:0; right:0; bottom:0; left:0;
     @include flex-container(row, wrap, center); background-color:rgba($black,0.8);
     .content { }
-    summary { display: block; margin-bottom: 1em; font-weight: $light; text-align: center; text-shadow:0 0 0.2em $black; }
+    summary { display: block; font-weight: $light; text-align: center; text-shadow:0 0 0.2em $black; }
   }
 }
 
@@ -61,6 +61,6 @@ main.home { padding:0; position: relative; background-size:cover; background-pos
 }
 @media (min-width:$desktop-min) {
   .center-content { padding: $base-margin; min-height: calc(100vh - 153px);
-    summary { font-size:3vw; }
+    summary { font-size:2.7vw; }
   }
 }
