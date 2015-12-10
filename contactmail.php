@@ -24,7 +24,7 @@ $email
 Address:
 $address
 $city , $state $zip";
-  $recipient = "info@dance-n-magic.com,citrusmirakel@gmail.com";
+  $recipient = "dancenmagic@gmail.com,citrusmirakel@gmail.com";
   $subject = "Free Class Signup";
   $mailheader = "From: info@dance-n-magic.com \r\n";
   mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");

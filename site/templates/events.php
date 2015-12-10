@@ -6,6 +6,13 @@
     <h1><?php echo $page->title()->html() ?></h1>
 
     <div class="event-listing">
+      
+      <?php if ($page->gcal_toggle() == "true"): ?>
+        <article class="event calendar-holder" style="padding:5px">
+          <iframe src="<?php echo $page->gcal_url(); ?>" style="border-width:0" width="100%" height="<?php echo $page->gcal_height(); ?>" frameborder="0" scrolling="no"></iframe>
+        </article>
+      <?php endif; ?>
+      
       <?php foreach ($page->children()->visible() as $event): ?>
         <article class="event">
           <?php if ($event->featured_image() != ""): ?>
