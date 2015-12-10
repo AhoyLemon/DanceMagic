@@ -106,3 +106,9 @@ fields:
     types:
       - image
     help: Make sure this is just a logo.
+  tracking_html:
+    label: tracking HTML
+    type: textarea
+    buttons: false
+    icon: code
+    help: Copy/paste html here and it will appear on every page. PLEASE be careful and double check the results, this could cause issues.

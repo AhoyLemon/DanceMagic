@@ -12,6 +12,7 @@ function hideClasses() {
 
 
 $('#AgePick').on('keyup change', function() {
+  //alert($(this).val());
   if ($(this).val() < 3 || $(this).val() > 99 || isNaN($(this).val()) || $(this).val() === null ) {
     $('.class').removeClass('too-old, too-young');
   } else {
