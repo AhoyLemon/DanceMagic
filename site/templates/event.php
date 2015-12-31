@@ -30,7 +30,7 @@
       <?php if ($page->price() != ""): ?>
         <span class="cost">$<?php echo $page->price(); ?></span>
       <?php endif; ?>
-      <?php if ($page->register_link()): ?>
+      <?php if ($page->register_link() != ""): ?>
         <div class="register-holder" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
           <?php if ($page->price() != ""): ?>
             <meta itemprop="priceCurrency" content="USD" />

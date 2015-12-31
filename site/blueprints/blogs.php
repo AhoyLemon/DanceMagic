@@ -4,6 +4,7 @@ title: Blogs
 pages:
   template:
     - blog
+    - default
 fields:
   title:
     label: Title

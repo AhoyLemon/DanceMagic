@@ -25,7 +25,7 @@
                 <span class="cost">$<?php echo $event->price(); ?></span>
               <?php endif; ?>
               <?php if ($event->eventdate() != ""): ?>
-                <time class="date"><?php echo date("l, F jS", strtotime($event->datestarts())); ?></time>
+                <time class="date"><?php echo date("l, F jS", strtotime($event->eventdate())); ?></time>
               <?php endif; ?>
               <?php if ($event->timestarts() != ""): ?>
                 <time class="time">
@@ -40,8 +40,8 @@
             <summary>
               <?php echo $event->desc()->kirbytext(); ?>
             </summary>
-            <a href="<?php echo $event->url(); ?>" class="button">Learn More</a>
           </div>
+          <a href="<?php echo $event->url(); ?>" class="button">Learn More</a>
         </article>
       <?php endforeach; ?>
     </div>

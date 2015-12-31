@@ -48,25 +48,7 @@
       <?php endif ?>
     </article>
 
-    <section class="blog-signup">
-      <div class="form-holder">
-        <h3><?php echo $page->parent()->mailinglist_title(); ?></h3>
-        <?php echo $page->parent()->mailinglist_text()->kirbytext(); ?>
-        <form>
-          <div class="full-width">
-            <input type="email" placeholder="email address" required>
-          </div>
-          <div class="half-width">
-            <label>
-              <input type="checkbox" required><span>Opt In to receive emails from Dance N Magic</span>
-            </label>
-          </div>
-          <div class="half-width">
-            <button type="submit" class="submit">Sign Up</button>
-          </div>
-        </form>
-      </div>
-    </section>
+    <?php snippet('signup') ?>
       
   </main>
 

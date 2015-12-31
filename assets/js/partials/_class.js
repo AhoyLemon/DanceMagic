@@ -40,7 +40,7 @@ $('#SelectLevel').change(function() {
     //if ($(this).val()
     $('.class').each(function() {
       if ($(this).attr('explevel')) {
-        if ($(this).attr('explevel').indexOf(myLevel) > -1 ) {
+        if ($(this).attr('explevel').indexOf(myLevel) > -1 || $(this).attr('explevel') == "all" ) {
           $(this).removeClass('wrong-level');
         } else {
           $(this).addClass('wrong-level');
@@ -83,52 +83,6 @@ $('#SelectClassType').change(function() {
   hideClasses();
 });
 
-
-
-// GENDER SELECTION DEPRECATED
-/*
-$('#SelectGender').change(function() {
-  if ( $(this).val() == "both") {
-    $('.class').removeClass('wrong-gender');
-  } else {
-    var wrongGender = "";
-    if ( $(this).val() == "M") {
-      wrongGender = "F";
-    } else if ( $(this).val() == "F") {
-      wrongGender="M";
-    }
-    $('.class').each(function() {
-      if ( $(this).attr('gender') == wrongGender ) {
-        $(this).addClass('wrong-gender');
-      } else {
-        $(this).removeClass('wrong-gender');
-      }
-    });
-  }
-  hideClasses();
-});
-*/
-
-// GENDER SELECTION DEPRECATED
-/*
-$('#ClassDay').change(function() {
-  //alert('changed');
-  if ( $(this).val() == "both") {
-    $('.class').removeClass('wrong-day');
-  } else {
-    var day = $(this).val();
-    $('.class').each(function() {
-      if ( day.indexOf($(this).attr('day')) > -1 ) {
-        $(this).removeClass('wrong-day');
-        console.log('day match');
-      } else {
-        $(this).addClass('wrong-day');
-      }
-    });
-  }
-  hideClasses();
-});
-*/
 
 
 function PopupCenter(url, title, w, h) {  
