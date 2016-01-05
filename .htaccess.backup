@@ -35,11 +35,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*) index.php [L]
 
-# Set WWW to non-WWW
-RewriteBase /
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ http://dance-n-magic.com/$1 [L,R=301]
-
 </IfModule>
 
 # Additional recommended values
@@ -48,3 +43,7 @@ RewriteRule ^(.*)$ http://dance-n-magic.com/$1 [L,R=301]
 # AddDefaultCharset UTF-8
 #
 # php_flag short_open_tag on
+RewriteCond %{HTTP_HOST} ^dancenmagic\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.dancenmagic\.com$
+RewriteRule ^/?$ "http\:\/\/dance\-n\-magic\.com" [R=301,L]
+
